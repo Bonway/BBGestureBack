@@ -1,0 +1,659 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CEDECB9C205CC3CD00C08340 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEDECB9B205CC3CD00C08340 /* Assets.xcassets */; };
+		CEDECB9F205CC3CD00C08340 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEDECB9D205CC3CD00C08340 /* LaunchScreen.storyboard */; };
+		CEDECBA2205CC3CD00C08340 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDECBA1205CC3CD00C08340 /* main.m */; };
+		CEDECBAC205CC3CD00C08340 /* BBGestureBackTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDECBAB205CC3CD00C08340 /* BBGestureBackTests.m */; };
+		CEDECBB7205CC3CD00C08340 /* BBGestureBackUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDECBB6205CC3CD00C08340 /* BBGestureBackUITests.m */; };
+		CEDECBCD205CC54D00C08340 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDECBC7205CC54D00C08340 /* ViewController.m */; };
+		CEDECBCE205CC54D00C08340 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDECBCA205CC54D00C08340 /* AppDelegate.m */; };
+		CEDECBD2205CC76800C08340 /* BBTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDECBD1205CC76800C08340 /* BBTabBarController.m */; };
+		CEDECBD7205CC82800C08340 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDECBD6205CC82800C08340 /* HomeViewController.m */; };
+		CEDECBDB205CC8BC00C08340 /* BBNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDECBDA205CC8BC00C08340 /* BBNavigationController.m */; };
+		CEDECBE0205CC94100C08340 /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDECBDF205CC94100C08340 /* UserViewController.m */; };
+		CEDECBE3205CCA4100C08340 /* BBGestureBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDECBE2205CCA4100C08340 /* BBGestureBaseController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CEDECBA8205CC3CD00C08340 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CEDECB87205CC3CD00C08340 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CEDECB8E205CC3CD00C08340;
+			remoteInfo = BBGestureBack;
+		};
+		CEDECBB3205CC3CD00C08340 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CEDECB87205CC3CD00C08340 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CEDECB8E205CC3CD00C08340;
+			remoteInfo = BBGestureBack;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CEDECB8F205CC3CD00C08340 /* BBGestureBack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BBGestureBack.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEDECB9B205CC3CD00C08340 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CEDECB9E205CC3CD00C08340 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CEDECBA0205CC3CD00C08340 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEDECBA1205CC3CD00C08340 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CEDECBA7205CC3CD00C08340 /* BBGestureBackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BBGestureBackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEDECBAB205CC3CD00C08340 /* BBGestureBackTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBGestureBackTests.m; sourceTree = "<group>"; };
+		CEDECBAD205CC3CD00C08340 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEDECBB2205CC3CD00C08340 /* BBGestureBackUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BBGestureBackUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEDECBB6205CC3CD00C08340 /* BBGestureBackUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBGestureBackUITests.m; sourceTree = "<group>"; };
+		CEDECBB8205CC3CD00C08340 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEDECBC6205CC54D00C08340 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		CEDECBC7205CC54D00C08340 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		CEDECBC9205CC54D00C08340 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CEDECBCA205CC54D00C08340 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CEDECBD0205CC76800C08340 /* BBTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBTabBarController.h; sourceTree = "<group>"; };
+		CEDECBD1205CC76800C08340 /* BBTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBTabBarController.m; sourceTree = "<group>"; };
+		CEDECBD5205CC82800C08340 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		CEDECBD6205CC82800C08340 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		CEDECBD9205CC8BC00C08340 /* BBNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBNavigationController.h; sourceTree = "<group>"; };
+		CEDECBDA205CC8BC00C08340 /* BBNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBNavigationController.m; sourceTree = "<group>"; };
+		CEDECBDE205CC94100C08340 /* UserViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserViewController.h; sourceTree = "<group>"; };
+		CEDECBDF205CC94100C08340 /* UserViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
+		CEDECBE1205CCA4100C08340 /* BBGestureBaseController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBGestureBaseController.h; sourceTree = "<group>"; };
+		CEDECBE2205CCA4100C08340 /* BBGestureBaseController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBGestureBaseController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CEDECB8C205CC3CD00C08340 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEDECBA4205CC3CD00C08340 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEDECBAF205CC3CD00C08340 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CEDECB86205CC3CD00C08340 = {
+			isa = PBXGroup;
+			children = (
+				CEDECB91205CC3CD00C08340 /* BBGestureBack */,
+				CEDECBAA205CC3CD00C08340 /* BBGestureBackTests */,
+				CEDECBB5205CC3CD00C08340 /* BBGestureBackUITests */,
+				CEDECB90205CC3CD00C08340 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CEDECB90205CC3CD00C08340 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CEDECB8F205CC3CD00C08340 /* BBGestureBack.app */,
+				CEDECBA7205CC3CD00C08340 /* BBGestureBackTests.xctest */,
+				CEDECBB2205CC3CD00C08340 /* BBGestureBackUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CEDECB91205CC3CD00C08340 /* BBGestureBack */ = {
+			isa = PBXGroup;
+			children = (
+				CEDECBC4205CC54D00C08340 /* Classes */,
+				CEDECB9B205CC3CD00C08340 /* Assets.xcassets */,
+				CEDECB9D205CC3CD00C08340 /* LaunchScreen.storyboard */,
+				CEDECBA0205CC3CD00C08340 /* Info.plist */,
+				CEDECBA1205CC3CD00C08340 /* main.m */,
+			);
+			path = BBGestureBack;
+			sourceTree = "<group>";
+		};
+		CEDECBAA205CC3CD00C08340 /* BBGestureBackTests */ = {
+			isa = PBXGroup;
+			children = (
+				CEDECBAB205CC3CD00C08340 /* BBGestureBackTests.m */,
+				CEDECBAD205CC3CD00C08340 /* Info.plist */,
+			);
+			path = BBGestureBackTests;
+			sourceTree = "<group>";
+		};
+		CEDECBB5205CC3CD00C08340 /* BBGestureBackUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CEDECBB6205CC3CD00C08340 /* BBGestureBackUITests.m */,
+				CEDECBB8205CC3CD00C08340 /* Info.plist */,
+			);
+			path = BBGestureBackUITests;
+			sourceTree = "<group>";
+		};
+		CEDECBC4205CC54D00C08340 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				CEDECBC5205CC54D00C08340 /* Home */,
+				CEDECBDC205CC90F00C08340 /* User */,
+				CEDECBC8205CC54D00C08340 /* Main */,
+				CEDECBCC205CC54D00C08340 /* Other */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		CEDECBC5205CC54D00C08340 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				CEDECBD3205CC7F500C08340 /* Index */,
+				CEDECBD4205CC7F500C08340 /* two */,
+				CEDECBC6205CC54D00C08340 /* ViewController.h */,
+				CEDECBC7205CC54D00C08340 /* ViewController.m */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		CEDECBC8205CC54D00C08340 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				CEDECBC9205CC54D00C08340 /* AppDelegate.h */,
+				CEDECBCA205CC54D00C08340 /* AppDelegate.m */,
+				CEDECBD8205CC88500C08340 /* BBNavigation */,
+				CEDECBCB205CC54D00C08340 /* BBGestureBack */,
+				CEDECBCF205CC72C00C08340 /* BBTabBar */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		CEDECBCB205CC54D00C08340 /* BBGestureBack */ = {
+			isa = PBXGroup;
+			children = (
+				CEDECBE1205CCA4100C08340 /* BBGestureBaseController.h */,
+				CEDECBE2205CCA4100C08340 /* BBGestureBaseController.m */,
+			);
+			path = BBGestureBack;
+			sourceTree = "<group>";
+		};
+		CEDECBCC205CC54D00C08340 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		CEDECBCF205CC72C00C08340 /* BBTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				CEDECBD0205CC76800C08340 /* BBTabBarController.h */,
+				CEDECBD1205CC76800C08340 /* BBTabBarController.m */,
+			);
+			path = BBTabBar;
+			sourceTree = "<group>";
+		};
+		CEDECBD3205CC7F500C08340 /* Index */ = {
+			isa = PBXGroup;
+			children = (
+				CEDECBD5205CC82800C08340 /* HomeViewController.h */,
+				CEDECBD6205CC82800C08340 /* HomeViewController.m */,
+			);
+			path = Index;
+			sourceTree = "<group>";
+		};
+		CEDECBD4205CC7F500C08340 /* two */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = two;
+			sourceTree = "<group>";
+		};
+		CEDECBD8205CC88500C08340 /* BBNavigation */ = {
+			isa = PBXGroup;
+			children = (
+				CEDECBD9205CC8BC00C08340 /* BBNavigationController.h */,
+				CEDECBDA205CC8BC00C08340 /* BBNavigationController.m */,
+			);
+			path = BBNavigation;
+			sourceTree = "<group>";
+		};
+		CEDECBDC205CC90F00C08340 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				CEDECBDD205CC92300C08340 /* Index */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		CEDECBDD205CC92300C08340 /* Index */ = {
+			isa = PBXGroup;
+			children = (
+				CEDECBDE205CC94100C08340 /* UserViewController.h */,
+				CEDECBDF205CC94100C08340 /* UserViewController.m */,
+			);
+			path = Index;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CEDECB8E205CC3CD00C08340 /* BBGestureBack */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEDECBBB205CC3CD00C08340 /* Build configuration list for PBXNativeTarget "BBGestureBack" */;
+			buildPhases = (
+				CEDECB8B205CC3CD00C08340 /* Sources */,
+				CEDECB8C205CC3CD00C08340 /* Frameworks */,
+				CEDECB8D205CC3CD00C08340 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BBGestureBack;
+			productName = BBGestureBack;
+			productReference = CEDECB8F205CC3CD00C08340 /* BBGestureBack.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CEDECBA6205CC3CD00C08340 /* BBGestureBackTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEDECBBE205CC3CD00C08340 /* Build configuration list for PBXNativeTarget "BBGestureBackTests" */;
+			buildPhases = (
+				CEDECBA3205CC3CD00C08340 /* Sources */,
+				CEDECBA4205CC3CD00C08340 /* Frameworks */,
+				CEDECBA5205CC3CD00C08340 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CEDECBA9205CC3CD00C08340 /* PBXTargetDependency */,
+			);
+			name = BBGestureBackTests;
+			productName = BBGestureBackTests;
+			productReference = CEDECBA7205CC3CD00C08340 /* BBGestureBackTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CEDECBB1205CC3CD00C08340 /* BBGestureBackUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEDECBC1205CC3CD00C08340 /* Build configuration list for PBXNativeTarget "BBGestureBackUITests" */;
+			buildPhases = (
+				CEDECBAE205CC3CD00C08340 /* Sources */,
+				CEDECBAF205CC3CD00C08340 /* Frameworks */,
+				CEDECBB0205CC3CD00C08340 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CEDECBB4205CC3CD00C08340 /* PBXTargetDependency */,
+			);
+			name = BBGestureBackUITests;
+			productName = BBGestureBackUITests;
+			productReference = CEDECBB2205CC3CD00C08340 /* BBGestureBackUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CEDECB87205CC3CD00C08340 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = Bonway;
+				TargetAttributes = {
+					CEDECB8E205CC3CD00C08340 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					CEDECBA6205CC3CD00C08340 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = CEDECB8E205CC3CD00C08340;
+					};
+					CEDECBB1205CC3CD00C08340 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = CEDECB8E205CC3CD00C08340;
+					};
+				};
+			};
+			buildConfigurationList = CEDECB8A205CC3CD00C08340 /* Build configuration list for PBXProject "BBGestureBack" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CEDECB86205CC3CD00C08340;
+			productRefGroup = CEDECB90205CC3CD00C08340 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CEDECB8E205CC3CD00C08340 /* BBGestureBack */,
+				CEDECBA6205CC3CD00C08340 /* BBGestureBackTests */,
+				CEDECBB1205CC3CD00C08340 /* BBGestureBackUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CEDECB8D205CC3CD00C08340 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEDECB9F205CC3CD00C08340 /* LaunchScreen.storyboard in Resources */,
+				CEDECB9C205CC3CD00C08340 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEDECBA5205CC3CD00C08340 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEDECBB0205CC3CD00C08340 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CEDECB8B205CC3CD00C08340 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEDECBE0205CC94100C08340 /* UserViewController.m in Sources */,
+				CEDECBCD205CC54D00C08340 /* ViewController.m in Sources */,
+				CEDECBA2205CC3CD00C08340 /* main.m in Sources */,
+				CEDECBCE205CC54D00C08340 /* AppDelegate.m in Sources */,
+				CEDECBD7205CC82800C08340 /* HomeViewController.m in Sources */,
+				CEDECBD2205CC76800C08340 /* BBTabBarController.m in Sources */,
+				CEDECBE3205CCA4100C08340 /* BBGestureBaseController.m in Sources */,
+				CEDECBDB205CC8BC00C08340 /* BBNavigationController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEDECBA3205CC3CD00C08340 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEDECBAC205CC3CD00C08340 /* BBGestureBackTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEDECBAE205CC3CD00C08340 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEDECBB7205CC3CD00C08340 /* BBGestureBackUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CEDECBA9205CC3CD00C08340 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CEDECB8E205CC3CD00C08340 /* BBGestureBack */;
+			targetProxy = CEDECBA8205CC3CD00C08340 /* PBXContainerItemProxy */;
+		};
+		CEDECBB4205CC3CD00C08340 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CEDECB8E205CC3CD00C08340 /* BBGestureBack */;
+			targetProxy = CEDECBB3205CC3CD00C08340 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CEDECB9D205CC3CD00C08340 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CEDECB9E205CC3CD00C08340 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CEDECBB9205CC3CD00C08340 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CEDECBBA205CC3CD00C08340 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CEDECBBC205CC3CD00C08340 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BBGestureBack/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Bonway.com.BBGestureBack;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CEDECBBD205CC3CD00C08340 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BBGestureBack/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Bonway.com.BBGestureBack;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CEDECBBF205CC3CD00C08340 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BBGestureBackTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Bonway.com.BBGestureBackTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BBGestureBack.app/BBGestureBack";
+			};
+			name = Debug;
+		};
+		CEDECBC0205CC3CD00C08340 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BBGestureBackTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Bonway.com.BBGestureBackTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BBGestureBack.app/BBGestureBack";
+			};
+			name = Release;
+		};
+		CEDECBC2205CC3CD00C08340 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BBGestureBackUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Bonway.com.BBGestureBackUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BBGestureBack;
+			};
+			name = Debug;
+		};
+		CEDECBC3205CC3CD00C08340 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BBGestureBackUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Bonway.com.BBGestureBackUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BBGestureBack;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CEDECB8A205CC3CD00C08340 /* Build configuration list for PBXProject "BBGestureBack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEDECBB9205CC3CD00C08340 /* Debug */,
+				CEDECBBA205CC3CD00C08340 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEDECBBB205CC3CD00C08340 /* Build configuration list for PBXNativeTarget "BBGestureBack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEDECBBC205CC3CD00C08340 /* Debug */,
+				CEDECBBD205CC3CD00C08340 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEDECBBE205CC3CD00C08340 /* Build configuration list for PBXNativeTarget "BBGestureBackTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEDECBBF205CC3CD00C08340 /* Debug */,
+				CEDECBC0205CC3CD00C08340 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEDECBC1205CC3CD00C08340 /* Build configuration list for PBXNativeTarget "BBGestureBackUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEDECBC2205CC3CD00C08340 /* Debug */,
+				CEDECBC3205CC3CD00C08340 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CEDECB87205CC3CD00C08340 /* Project object */;
+}
