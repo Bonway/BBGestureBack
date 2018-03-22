@@ -28,21 +28,10 @@
 
 - (void)setUpAllChildViewController {
     HomeViewController *home = [[HomeViewController alloc] init];
-    [self setUpOneChildViewController:home image:[UIImage imageNamed:@"TabBarHomeNormal"] selectedImage:[UIImage imageNamed:@"TabBarHomeSelected"] title:@"主页"];
-    
+    [self setUpOneChildViewController:home image:[UIImage imageNamed:@"TabBarHomeNormal"] selectedImage:[UIImage imageNamed:@"TabBarHomeSelected"] title:@"Home"];
     UserViewController *user = [[UserViewController alloc] init];
-    [self setUpOneChildViewController:user image:[UIImage imageNamed:@"TabBarUserNormal"] selectedImage:[UIImage imageNamed:@"TabBarUserSelected"] title:@"我的"];
+    [self setUpOneChildViewController:user image:[UIImage imageNamed:@"TabBarUserNormal"] selectedImage:[UIImage imageNamed:@"TabBarUserSelected"] title:@"User"];
 }
-
-
-/**
- *  设置每个子控制器的相关信息
- *
- *  @param vc            控制器
- *  @param image         未选中的图片
- *  @param selectedImage 选中的图片
- *  @param title         标题
- */
 - (void)setUpOneChildViewController:(UIViewController *)vc image:(UIImage *)image selectedImage:(UIImage *)selectedImage title:(NSString *)title {
     vc.title = title;
     vc.tabBarItem.image = image;

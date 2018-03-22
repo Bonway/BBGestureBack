@@ -13,7 +13,7 @@
 @end
 
 
-@interface ScreenShotView : UIView
+@interface BBScreenShotView : UIView
 @property (nonatomic, strong) UIImageView *imgView;
 @property (nonatomic, strong) UIView *maskView;
 @property (nonatomic, strong) NSMutableArray *arrayImage;

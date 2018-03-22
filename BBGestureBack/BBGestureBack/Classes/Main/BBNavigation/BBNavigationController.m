@@ -8,6 +8,7 @@
 
 #import "BBNavigationController.h"
 #import "BBGestureBaseController.h"
+#import "BBGestureBackConst.h"
 #import "AppDelegate.h"
 @interface BBNavigationController ()<UIGestureRecognizerDelegate,UINavigationControllerDelegate>
 
@@ -15,8 +16,7 @@
 
 @implementation BBNavigationController
 
-// 打开边界后，放开，距离左边多少距离才触发pop
-#define Distance_To_Pop 80
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,19 +27,14 @@
     return self;
 }
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad{
     [super viewDidLoad];
     //屏蔽系统的手势
     self.interactivePopGestureRecognizer.enabled = NO;
     self.panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePanGesture:)];
     _panGesture.delegate = self;
     [self.view addGestureRecognizer:_panGesture];
-    
-    
-    
 }
-//
 - (BOOL)gestureRecognizerShouldBegin:(UIPanGestureRecognizer *)gestureRecognizer {
     if (gestureRecognizer.view == self.view) {
         BBGestureBaseController *topView = (BBGestureBaseController *)self.topViewController;
@@ -108,7 +103,7 @@
     else if (panGesture.state == UIGestureRecognizerStateEnded)
     {
         CGPoint point_inView = [panGesture translationInView:self.view];
-        if (point_inView.x >= Distance_To_Pop)
+        if (point_inView.x >= BBDistanceToLeft)
         {
             [UIView animateWithDuration:0.3 animations:^{
                 rootVC.view.transform = CGAffineTransformMakeTranslation(([UIScreen mainScreen].bounds.size.width), 0);

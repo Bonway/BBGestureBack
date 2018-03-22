@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CEC3BBC8206354CE0003CF06 /* BBGestureBackConst.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC3BBC7206354CE0003CF06 /* BBGestureBackConst.m */; };
 		CEDECB9C205CC3CD00C08340 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEDECB9B205CC3CD00C08340 /* Assets.xcassets */; };
 		CEDECB9F205CC3CD00C08340 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEDECB9D205CC3CD00C08340 /* LaunchScreen.storyboard */; };
 		CEDECBA2205CC3CD00C08340 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDECBA1205CC3CD00C08340 /* main.m */; };
@@ -39,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CEC3BBC6206354AC0003CF06 /* BBGestureBackConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBGestureBackConst.h; sourceTree = "<group>"; };
+		CEC3BBC7206354CE0003CF06 /* BBGestureBackConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBGestureBackConst.m; sourceTree = "<group>"; };
 		CEDECB8F205CC3CD00C08340 /* BBGestureBack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BBGestureBack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEDECB9B205CC3CD00C08340 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEDECB9E205CC3CD00C08340 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -178,6 +181,8 @@
 		CEDECBCB205CC54D00C08340 /* BBGestureBack */ = {
 			isa = PBXGroup;
 			children = (
+				CEC3BBC6206354AC0003CF06 /* BBGestureBackConst.h */,
+				CEC3BBC7206354CE0003CF06 /* BBGestureBackConst.m */,
 				CEDECBE1205CCA4100C08340 /* BBGestureBaseController.h */,
 				CEDECBE2205CCA4100C08340 /* BBGestureBaseController.m */,
 			);
@@ -379,6 +384,7 @@
 				CEDECBA2205CC3CD00C08340 /* main.m in Sources */,
 				CEDECBCE205CC54D00C08340 /* AppDelegate.m in Sources */,
 				CEDECBD7205CC82800C08340 /* HomeViewController.m in Sources */,
+				CEC3BBC8206354CE0003CF06 /* BBGestureBackConst.m in Sources */,
 				CEDECBD2205CC76800C08340 /* BBTabBarController.m in Sources */,
 				CEDECBE3205CCA4100C08340 /* BBGestureBaseController.m in Sources */,
 				CEDECBDB205CC8BC00C08340 /* BBNavigationController.m in Sources */,
@@ -540,7 +546,7 @@
 				INFOPLIST_FILE = BBGestureBack/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Bonway.com.BBGestureBack;
+				PRODUCT_BUNDLE_IDENTIFIER = Bonway.com.gestureBack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -554,7 +560,7 @@
 				INFOPLIST_FILE = BBGestureBack/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Bonway.com.BBGestureBack;
+				PRODUCT_BUNDLE_IDENTIFIER = Bonway.com.gestureBack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
