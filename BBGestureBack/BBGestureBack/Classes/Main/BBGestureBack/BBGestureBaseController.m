@@ -1,10 +1,9 @@
-//
-//  BBGestureBaseController.m
+//  代码地址: https://github.com/Bonway/BBGestureBack
 //  BBGestureBack
+//  Created by Bonway on 2016/3/17.
+//  Copyright © 2016年 Bonway. All rights reserved.
 //
-//  Created by user on 2018/3/17.
-//  Copyright © 2018年 Bonway. All rights reserved.
-//
+
 
 #import "BBGestureBaseController.h"
 #import <QuartzCore/QuartzCore.h>

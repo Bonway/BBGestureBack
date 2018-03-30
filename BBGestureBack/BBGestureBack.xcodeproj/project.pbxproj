@@ -150,7 +150,6 @@
 				CEDECBC5205CC54D00C08340 /* Home */,
 				CEDECBDC205CC90F00C08340 /* User */,
 				CEDECBC8205CC54D00C08340 /* Main */,
-				CEDECBCC205CC54D00C08340 /* Other */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -159,7 +158,6 @@
 			isa = PBXGroup;
 			children = (
 				CEDECBD3205CC7F500C08340 /* Index */,
-				CEDECBD4205CC7F500C08340 /* two */,
 				CEDECBC6205CC54D00C08340 /* ViewController.h */,
 				CEDECBC7205CC54D00C08340 /* ViewController.m */,
 			);
@@ -189,13 +187,6 @@
 			path = BBGestureBack;
 			sourceTree = "<group>";
 		};
-		CEDECBCC205CC54D00C08340 /* Other */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Other;
-			sourceTree = "<group>";
-		};
 		CEDECBCF205CC72C00C08340 /* BBTabBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -212,13 +203,6 @@
 				CEDECBD6205CC82800C08340 /* HomeViewController.m */,
 			);
 			path = Index;
-			sourceTree = "<group>";
-		};
-		CEDECBD4205CC7F500C08340 /* two */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = two;
 			sourceTree = "<group>";
 		};
 		CEDECBD8205CC88500C08340 /* BBNavigation */ = {
