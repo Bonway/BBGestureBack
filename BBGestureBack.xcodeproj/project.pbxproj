@@ -11,8 +11,6 @@
 		CEDECB9C205CC3CD00C08340 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEDECB9B205CC3CD00C08340 /* Assets.xcassets */; };
 		CEDECB9F205CC3CD00C08340 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEDECB9D205CC3CD00C08340 /* LaunchScreen.storyboard */; };
 		CEDECBA2205CC3CD00C08340 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDECBA1205CC3CD00C08340 /* main.m */; };
-		CEDECBAC205CC3CD00C08340 /* BBGestureBackTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDECBAB205CC3CD00C08340 /* BBGestureBackTests.m */; };
-		CEDECBB7205CC3CD00C08340 /* BBGestureBackUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDECBB6205CC3CD00C08340 /* BBGestureBackUITests.m */; };
 		CEDECBCD205CC54D00C08340 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDECBC7205CC54D00C08340 /* ViewController.m */; };
 		CEDECBCE205CC54D00C08340 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDECBCA205CC54D00C08340 /* AppDelegate.m */; };
 		CEDECBD2205CC76800C08340 /* BBTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDECBD1205CC76800C08340 /* BBTabBarController.m */; };
@@ -20,39 +18,21 @@
 		CEDECBDB205CC8BC00C08340 /* BBNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDECBDA205CC8BC00C08340 /* BBNavigationController.m */; };
 		CEDECBE0205CC94100C08340 /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDECBDF205CC94100C08340 /* UserViewController.m */; };
 		CEDECBE3205CCA4100C08340 /* BBGestureBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDECBE2205CCA4100C08340 /* BBGestureBaseController.m */; };
+		CFD0E96E207A621C00E58465 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD0E96D207A621C00E58465 /* AppDelegate.swift */; };
+		CFD0E970207A621C00E58465 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD0E96F207A621C00E58465 /* ViewController.swift */; };
+		CFD0E973207A621C00E58465 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFD0E971207A621C00E58465 /* Main.storyboard */; };
+		CFD0E975207A621C00E58465 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFD0E974207A621C00E58465 /* Assets.xcassets */; };
+		CFD0E978207A621C00E58465 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFD0E976207A621C00E58465 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		CEDECBA8205CC3CD00C08340 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CEDECB87205CC3CD00C08340 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = CEDECB8E205CC3CD00C08340;
-			remoteInfo = BBGestureBack;
-		};
-		CEDECBB3205CC3CD00C08340 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CEDECB87205CC3CD00C08340 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = CEDECB8E205CC3CD00C08340;
-			remoteInfo = BBGestureBack;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		CEC3BBC6206354AC0003CF06 /* BBGestureBackConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBGestureBackConst.h; sourceTree = "<group>"; };
 		CEC3BBC7206354CE0003CF06 /* BBGestureBackConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBGestureBackConst.m; sourceTree = "<group>"; };
-		CEDECB8F205CC3CD00C08340 /* BBGestureBack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BBGestureBack.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEDECB8F205CC3CD00C08340 /* BBGestureBack_Full_oc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BBGestureBack_Full_oc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEDECB9B205CC3CD00C08340 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEDECB9E205CC3CD00C08340 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEDECBA0205CC3CD00C08340 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEDECBA1205CC3CD00C08340 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		CEDECBA7205CC3CD00C08340 /* BBGestureBackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BBGestureBackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CEDECBAB205CC3CD00C08340 /* BBGestureBackTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBGestureBackTests.m; sourceTree = "<group>"; };
-		CEDECBAD205CC3CD00C08340 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CEDECBB2205CC3CD00C08340 /* BBGestureBackUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BBGestureBackUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CEDECBB6205CC3CD00C08340 /* BBGestureBackUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBGestureBackUITests.m; sourceTree = "<group>"; };
-		CEDECBB8205CC3CD00C08340 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEDECBC6205CC54D00C08340 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		CEDECBC7205CC54D00C08340 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		CEDECBC9205CC54D00C08340 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -67,6 +47,13 @@
 		CEDECBDF205CC94100C08340 /* UserViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
 		CEDECBE1205CCA4100C08340 /* BBGestureBaseController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBGestureBaseController.h; sourceTree = "<group>"; };
 		CEDECBE2205CCA4100C08340 /* BBGestureBaseController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBGestureBaseController.m; sourceTree = "<group>"; };
+		CFD0E96B207A621C00E58465 /* BBGestureBack_Full_swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BBGestureBack_Full_swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFD0E96D207A621C00E58465 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CFD0E96F207A621C00E58465 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CFD0E972207A621C00E58465 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CFD0E974207A621C00E58465 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CFD0E977207A621C00E58465 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CFD0E979207A621C00E58465 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,14 +64,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CEDECBA4205CC3CD00C08340 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CEDECBAF205CC3CD00C08340 /* Frameworks */ = {
+		CFD0E968207A621C00E58465 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -97,9 +77,8 @@
 		CEDECB86205CC3CD00C08340 = {
 			isa = PBXGroup;
 			children = (
-				CEDECB91205CC3CD00C08340 /* BBGestureBack */,
-				CEDECBAA205CC3CD00C08340 /* BBGestureBackTests */,
-				CEDECBB5205CC3CD00C08340 /* BBGestureBackUITests */,
+				CEDECB91205CC3CD00C08340 /* BBGestureBack_Full_oc */,
+				CFD0E96C207A621C00E58465 /* BBGestureBack_Full_swift */,
 				CEDECB90205CC3CD00C08340 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -107,14 +86,13 @@
 		CEDECB90205CC3CD00C08340 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CEDECB8F205CC3CD00C08340 /* BBGestureBack.app */,
-				CEDECBA7205CC3CD00C08340 /* BBGestureBackTests.xctest */,
-				CEDECBB2205CC3CD00C08340 /* BBGestureBackUITests.xctest */,
+				CEDECB8F205CC3CD00C08340 /* BBGestureBack_Full_oc.app */,
+				CFD0E96B207A621C00E58465 /* BBGestureBack_Full_swift.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CEDECB91205CC3CD00C08340 /* BBGestureBack */ = {
+		CEDECB91205CC3CD00C08340 /* BBGestureBack_Full_oc */ = {
 			isa = PBXGroup;
 			children = (
 				CEDECBC4205CC54D00C08340 /* Classes */,
@@ -123,25 +101,7 @@
 				CEDECBA0205CC3CD00C08340 /* Info.plist */,
 				CEDECBA1205CC3CD00C08340 /* main.m */,
 			);
-			path = BBGestureBack;
-			sourceTree = "<group>";
-		};
-		CEDECBAA205CC3CD00C08340 /* BBGestureBackTests */ = {
-			isa = PBXGroup;
-			children = (
-				CEDECBAB205CC3CD00C08340 /* BBGestureBackTests.m */,
-				CEDECBAD205CC3CD00C08340 /* Info.plist */,
-			);
-			path = BBGestureBackTests;
-			sourceTree = "<group>";
-		};
-		CEDECBB5205CC3CD00C08340 /* BBGestureBackUITests */ = {
-			isa = PBXGroup;
-			children = (
-				CEDECBB6205CC3CD00C08340 /* BBGestureBackUITests.m */,
-				CEDECBB8205CC3CD00C08340 /* Info.plist */,
-			);
-			path = BBGestureBackUITests;
+			path = BBGestureBack_Full_oc;
 			sourceTree = "<group>";
 		};
 		CEDECBC4205CC54D00C08340 /* Classes */ = {
@@ -231,12 +191,25 @@
 			path = Index;
 			sourceTree = "<group>";
 		};
+		CFD0E96C207A621C00E58465 /* BBGestureBack_Full_swift */ = {
+			isa = PBXGroup;
+			children = (
+				CFD0E96D207A621C00E58465 /* AppDelegate.swift */,
+				CFD0E96F207A621C00E58465 /* ViewController.swift */,
+				CFD0E971207A621C00E58465 /* Main.storyboard */,
+				CFD0E974207A621C00E58465 /* Assets.xcassets */,
+				CFD0E976207A621C00E58465 /* LaunchScreen.storyboard */,
+				CFD0E979207A621C00E58465 /* Info.plist */,
+			);
+			path = BBGestureBack_Full_swift;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CEDECB8E205CC3CD00C08340 /* BBGestureBack */ = {
+		CEDECB8E205CC3CD00C08340 /* BBGestureBack_Full_oc */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CEDECBBB205CC3CD00C08340 /* Build configuration list for PBXNativeTarget "BBGestureBack" */;
+			buildConfigurationList = CEDECBBB205CC3CD00C08340 /* Build configuration list for PBXNativeTarget "BBGestureBack_Full_oc" */;
 			buildPhases = (
 				CEDECB8B205CC3CD00C08340 /* Sources */,
 				CEDECB8C205CC3CD00C08340 /* Frameworks */,
@@ -246,46 +219,27 @@
 			);
 			dependencies = (
 			);
-			name = BBGestureBack;
+			name = BBGestureBack_Full_oc;
 			productName = BBGestureBack;
-			productReference = CEDECB8F205CC3CD00C08340 /* BBGestureBack.app */;
+			productReference = CEDECB8F205CC3CD00C08340 /* BBGestureBack_Full_oc.app */;
 			productType = "com.apple.product-type.application";
 		};
-		CEDECBA6205CC3CD00C08340 /* BBGestureBackTests */ = {
+		CFD0E96A207A621C00E58465 /* BBGestureBack_Full_swift */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CEDECBBE205CC3CD00C08340 /* Build configuration list for PBXNativeTarget "BBGestureBackTests" */;
+			buildConfigurationList = CFD0E996207A621D00E58465 /* Build configuration list for PBXNativeTarget "BBGestureBack_Full_swift" */;
 			buildPhases = (
-				CEDECBA3205CC3CD00C08340 /* Sources */,
-				CEDECBA4205CC3CD00C08340 /* Frameworks */,
-				CEDECBA5205CC3CD00C08340 /* Resources */,
+				CFD0E967207A621C00E58465 /* Sources */,
+				CFD0E968207A621C00E58465 /* Frameworks */,
+				CFD0E969207A621C00E58465 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				CEDECBA9205CC3CD00C08340 /* PBXTargetDependency */,
 			);
-			name = BBGestureBackTests;
-			productName = BBGestureBackTests;
-			productReference = CEDECBA7205CC3CD00C08340 /* BBGestureBackTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		CEDECBB1205CC3CD00C08340 /* BBGestureBackUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CEDECBC1205CC3CD00C08340 /* Build configuration list for PBXNativeTarget "BBGestureBackUITests" */;
-			buildPhases = (
-				CEDECBAE205CC3CD00C08340 /* Sources */,
-				CEDECBAF205CC3CD00C08340 /* Frameworks */,
-				CEDECBB0205CC3CD00C08340 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				CEDECBB4205CC3CD00C08340 /* PBXTargetDependency */,
-			);
-			name = BBGestureBackUITests;
-			productName = BBGestureBackUITests;
-			productReference = CEDECBB2205CC3CD00C08340 /* BBGestureBackUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
+			name = BBGestureBack_Full_swift;
+			productName = BBGestureBack_Full_swift;
+			productReference = CFD0E96B207A621C00E58465 /* BBGestureBack_Full_swift.app */;
+			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
@@ -293,6 +247,7 @@
 		CEDECB87205CC3CD00C08340 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = Bonway;
 				TargetAttributes = {
@@ -300,15 +255,9 @@
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
-					CEDECBA6205CC3CD00C08340 = {
+					CFD0E96A207A621C00E58465 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
-						TestTargetID = CEDECB8E205CC3CD00C08340;
-					};
-					CEDECBB1205CC3CD00C08340 = {
-						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
-						TestTargetID = CEDECB8E205CC3CD00C08340;
 					};
 				};
 			};
@@ -325,9 +274,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CEDECB8E205CC3CD00C08340 /* BBGestureBack */,
-				CEDECBA6205CC3CD00C08340 /* BBGestureBackTests */,
-				CEDECBB1205CC3CD00C08340 /* BBGestureBackUITests */,
+				CEDECB8E205CC3CD00C08340 /* BBGestureBack_Full_oc */,
+				CFD0E96A207A621C00E58465 /* BBGestureBack_Full_swift */,
 			);
 		};
 /* End PBXProject section */
@@ -342,17 +290,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CEDECBA5205CC3CD00C08340 /* Resources */ = {
+		CFD0E969207A621C00E58465 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CEDECBB0205CC3CD00C08340 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				CFD0E978207A621C00E58465 /* LaunchScreen.storyboard in Resources */,
+				CFD0E975207A621C00E58465 /* Assets.xcassets in Resources */,
+				CFD0E973207A621C00E58465 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,42 +319,38 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CEDECBA3205CC3CD00C08340 /* Sources */ = {
+		CFD0E967207A621C00E58465 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEDECBAC205CC3CD00C08340 /* BBGestureBackTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CEDECBAE205CC3CD00C08340 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CEDECBB7205CC3CD00C08340 /* BBGestureBackUITests.m in Sources */,
+				CFD0E970207A621C00E58465 /* ViewController.swift in Sources */,
+				CFD0E96E207A621C00E58465 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		CEDECBA9205CC3CD00C08340 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = CEDECB8E205CC3CD00C08340 /* BBGestureBack */;
-			targetProxy = CEDECBA8205CC3CD00C08340 /* PBXContainerItemProxy */;
-		};
-		CEDECBB4205CC3CD00C08340 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = CEDECB8E205CC3CD00C08340 /* BBGestureBack */;
-			targetProxy = CEDECBB3205CC3CD00C08340 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		CEDECB9D205CC3CD00C08340 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				CEDECB9E205CC3CD00C08340 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		CFD0E971207A621C00E58465 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CFD0E972207A621C00E58465 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CFD0E976207A621C00E58465 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CFD0E977207A621C00E58465 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -527,8 +467,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = BBGestureBack/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				INFOPLIST_FILE = "$(SRCROOT)/BBGestureBack_Full_oc/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Bonway.com.gestureBack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -541,8 +481,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = BBGestureBack/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				INFOPLIST_FILE = "$(SRCROOT)/BBGestureBack_Full_oc/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Bonway.com.gestureBack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -550,57 +490,34 @@
 			};
 			name = Release;
 		};
-		CEDECBBF205CC3CD00C08340 /* Debug */ = {
+		CFD0E990207A621D00E58465 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = BBGestureBackTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Bonway.com.BBGestureBackTests;
+				INFOPLIST_FILE = BBGestureBack_Full_swift/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Bonway.BBGestureBack-Full-swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BBGestureBack.app/BBGestureBack";
 			};
 			name = Debug;
 		};
-		CEDECBC0205CC3CD00C08340 /* Release */ = {
+		CFD0E991207A621D00E58465 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = BBGestureBackTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Bonway.com.BBGestureBackTests;
+				INFOPLIST_FILE = BBGestureBack_Full_swift/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Bonway.BBGestureBack-Full-swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BBGestureBack.app/BBGestureBack";
-			};
-			name = Release;
-		};
-		CEDECBC2205CC3CD00C08340 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = BBGestureBackUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Bonway.com.BBGestureBackUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = BBGestureBack;
-			};
-			name = Debug;
-		};
-		CEDECBC3205CC3CD00C08340 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = BBGestureBackUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Bonway.com.BBGestureBackUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = BBGestureBack;
 			};
 			name = Release;
 		};
@@ -616,7 +533,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CEDECBBB205CC3CD00C08340 /* Build configuration list for PBXNativeTarget "BBGestureBack" */ = {
+		CEDECBBB205CC3CD00C08340 /* Build configuration list for PBXNativeTarget "BBGestureBack_Full_oc" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CEDECBBC205CC3CD00C08340 /* Debug */,
@@ -625,20 +542,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CEDECBBE205CC3CD00C08340 /* Build configuration list for PBXNativeTarget "BBGestureBackTests" */ = {
+		CFD0E996207A621D00E58465 /* Build configuration list for PBXNativeTarget "BBGestureBack_Full_swift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CEDECBBF205CC3CD00C08340 /* Debug */,
-				CEDECBC0205CC3CD00C08340 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		CEDECBC1205CC3CD00C08340 /* Build configuration list for PBXNativeTarget "BBGestureBackUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CEDECBC2205CC3CD00C08340 /* Debug */,
-				CEDECBC3205CC3CD00C08340 /* Release */,
+				CFD0E990207A621D00E58465 /* Debug */,
+				CFD0E991207A621D00E58465 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
