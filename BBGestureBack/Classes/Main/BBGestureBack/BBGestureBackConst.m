@@ -9,3 +9,4 @@
 
 
 const CGFloat BBDistanceToLeft = 70.0;
+const CGFloat BBWindeowToScale = 0.95;

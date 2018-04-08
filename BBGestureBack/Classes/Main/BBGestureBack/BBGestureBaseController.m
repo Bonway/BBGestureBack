@@ -8,6 +8,7 @@
 #import "BBGestureBaseController.h"
 #import <QuartzCore/QuartzCore.h>
 #import "AppDelegate.h"
+#import "BBGestureBackConst.h"
 static char szListenTabbarViewMove[] = "listenTabViewMove";
 
 @interface BBGestureBaseController ()
@@ -63,14 +64,14 @@ static char szListenTabbarViewMove[] = "listenTabViewMove";
 - (void)showEffectChange:(CGPoint)pt{
     if (pt.x > 0){
         _maskView.backgroundColor = [UIColor colorWithHue:0 saturation:0 brightness:0 alpha:-pt.x / ([UIScreen mainScreen].bounds.size.width) * 0.4 + 0.4];
-        _imgView.transform = CGAffineTransformMakeScale(0.95 + (pt.x / ([UIScreen mainScreen].bounds.size.width) * 0.05), 0.95 + (pt.x / ([UIScreen mainScreen].bounds.size.width) * 0.05));
+        _imgView.transform = CGAffineTransformMakeScale(BBWindeowToScale + (pt.x / ([UIScreen mainScreen].bounds.size.width) * (1 - BBWindeowToScale)), BBWindeowToScale + (pt.x / ([UIScreen mainScreen].bounds.size.width) * (1 - BBWindeowToScale)));
     }
 }
 
 - (void)restore {
     if (_maskView && _imgView){
         _maskView.backgroundColor = [UIColor colorWithHue:0 saturation:0 brightness:0 alpha:0.4];
-        _imgView.transform = CGAffineTransformMakeScale(0.95, 0.95);
+        _imgView.transform = CGAffineTransformMakeScale(BBWindeowToScale, BBWindeowToScale);
     }
 }
 
@@ -83,7 +84,7 @@ static char szListenTabbarViewMove[] = "listenTabViewMove";
     CGImageRef imageRef = viewImage.CGImage;
     UIImage *sendImage = [[UIImage alloc] initWithCGImage:imageRef];
     self.imgView.image = sendImage;
-    self.imgView.transform = CGAffineTransformMakeScale(0.95, 0.95);
+    self.imgView.transform = CGAffineTransformMakeScale(BBWindeowToScale, BBWindeowToScale);
 }
 
 - (void)dealloc{
