@@ -20,11 +20,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     [self setUpAllChildViewController];
 }
-
-
 - (void)setUpAllChildViewController {
     HomeViewController *home = [[HomeViewController alloc] init];
     [self setUpOneChildViewController:home image:[UIImage imageNamed:@"TabBarHomeNormal"] selectedImage:[UIImage imageNamed:@"TabBarHomeSelected"] title:@"Home"];
@@ -38,10 +35,8 @@
     BBNavigationController *nav = [[BBNavigationController alloc] initWithRootViewController:vc];
     [self addChildViewController:nav];
 }
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    
 }
 
 

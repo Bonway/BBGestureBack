@@ -20,9 +20,9 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     self.window.rootViewController = [[BBTabBarController alloc] init];;
-    self.screenshotView = [[BBScreenShotView alloc] initWithFrame:CGRectMake(0, 0, self.window.frame.size.width, self.window.frame.size.height)];
-    [self.window insertSubview:self.screenshotView atIndex:0];
-    self.screenshotView.hidden = YES;
+    self.gestureBaseView = [[BBGestureBaseView alloc] initWithFrame:CGRectMake(0, 0, self.window.frame.size.width, self.window.frame.size.height)];
+    [self.window insertSubview:self.gestureBaseView atIndex:0];
+    self.gestureBaseView.hidden = YES;
     
     [self.window makeKeyAndVisible];
     

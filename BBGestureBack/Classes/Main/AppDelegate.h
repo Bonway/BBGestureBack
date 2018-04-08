@@ -9,7 +9,7 @@
 #import "BBGestureBaseController.h"
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
-@property (nonatomic, strong) BBScreenShotView *screenshotView;
+@property (nonatomic, strong) BBGestureBaseView *gestureBaseView;
 @property (strong, nonatomic) UIWindow *window;
 + (AppDelegate* )shareAppDelegate;
 

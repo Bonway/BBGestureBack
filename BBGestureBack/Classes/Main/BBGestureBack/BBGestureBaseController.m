@@ -34,9 +34,7 @@ static char szListenTabbarViewMove[] = "listenTabViewMove";
 }
 @end
 
-
-
-@implementation BBScreenShotView
+@implementation BBGestureBaseView
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
