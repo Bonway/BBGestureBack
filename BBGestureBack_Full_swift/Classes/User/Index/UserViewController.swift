@@ -1,17 +1,18 @@
 //
-//  ViewController.swift
+//  UserViewController.swift
 //  BBGestureBack_Full_swift
 //
-//  Created by Bonway(黄邦伟) on 2018/4/8.
+//  Created by Bonway(黄邦伟) on 2018/4/9.
 //  Copyright © 2018年 Bonway. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class UserViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         
     }
 
@@ -19,7 +20,7 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         
     }
+    
 
 
 }
-

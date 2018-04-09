@@ -21,7 +21,12 @@
 		CFD0E975207A621C00E58465 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFD0E974207A621C00E58465 /* Assets.xcassets */; };
 		CFD0E978207A621C00E58465 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFD0E976207A621C00E58465 /* LaunchScreen.storyboard */; };
 		CFD0E99F207A67DA00E58465 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD0E99B207A67DA00E58465 /* ViewController.swift */; };
-		CFD0E9A0207A67DA00E58465 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD0E99D207A67DA00E58465 /* AppDelegate.swift */; };
+		CFD0E9A3207BBA5000E58465 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD0E9A2207BBA5000E58465 /* HomeViewController.swift */; };
+		CFD0E9A6207BBAA200E58465 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD0E9A5207BBAA200E58465 /* UserViewController.swift */; };
+		CFD0E9AB207BBB3C00E58465 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD0E9AA207BBB3C00E58465 /* AppDelegate.swift */; };
+		CFD0E9AD207BBC9A00E58465 /* BBTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD0E9AC207BBC9A00E58465 /* BBTabBarController.swift */; };
+		CFD0E9AF207BBCD800E58465 /* BBNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD0E9AE207BBCD800E58465 /* BBNavigationController.swift */; };
+		CFD0E9B1207BBD1E00E58465 /* BBGestureBaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD0E9B0207BBD1E00E58465 /* BBGestureBaseController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,7 +56,12 @@
 		CFD0E977207A621C00E58465 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CFD0E979207A621C00E58465 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CFD0E99B207A67DA00E58465 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CFD0E99D207A67DA00E58465 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CFD0E9A2207BBA5000E58465 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		CFD0E9A5207BBAA200E58465 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		CFD0E9AA207BBB3C00E58465 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CFD0E9AC207BBC9A00E58465 /* BBTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBTabBarController.swift; sourceTree = "<group>"; };
+		CFD0E9AE207BBCD800E58465 /* BBNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBNavigationController.swift; sourceTree = "<group>"; };
+		CFD0E9B0207BBD1E00E58465 /* BBGestureBaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBGestureBaseController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,7 +216,6 @@
 				CFD0E99A207A67DA00E58465 /* Home */,
 				CFD0E99B207A67DA00E58465 /* ViewController.swift */,
 				CFD0E99C207A67DA00E58465 /* User */,
-				CFD0E99D207A67DA00E58465 /* AppDelegate.swift */,
 				CFD0E99E207A67DA00E58465 /* Main */,
 			);
 			path = Classes;
@@ -215,6 +224,7 @@
 		CFD0E99A207A67DA00E58465 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				CFD0E9A1207BBA2600E58465 /* Index */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -222,6 +232,7 @@
 		CFD0E99C207A67DA00E58465 /* User */ = {
 			isa = PBXGroup;
 			children = (
+				CFD0E9A4207BBA9000E58465 /* Index */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -229,8 +240,52 @@
 		CFD0E99E207A67DA00E58465 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				CFD0E9AA207BBB3C00E58465 /* AppDelegate.swift */,
+				CFD0E9A9207BBAF300E58465 /* BBGestureBack */,
+				CFD0E9A7207BBAF300E58465 /* BBNavigation */,
+				CFD0E9A8207BBAF300E58465 /* BBTabBar */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		CFD0E9A1207BBA2600E58465 /* Index */ = {
+			isa = PBXGroup;
+			children = (
+				CFD0E9A2207BBA5000E58465 /* HomeViewController.swift */,
+			);
+			path = Index;
+			sourceTree = "<group>";
+		};
+		CFD0E9A4207BBA9000E58465 /* Index */ = {
+			isa = PBXGroup;
+			children = (
+				CFD0E9A5207BBAA200E58465 /* UserViewController.swift */,
+			);
+			path = Index;
+			sourceTree = "<group>";
+		};
+		CFD0E9A7207BBAF300E58465 /* BBNavigation */ = {
+			isa = PBXGroup;
+			children = (
+				CFD0E9AE207BBCD800E58465 /* BBNavigationController.swift */,
+			);
+			path = BBNavigation;
+			sourceTree = "<group>";
+		};
+		CFD0E9A8207BBAF300E58465 /* BBTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				CFD0E9AC207BBC9A00E58465 /* BBTabBarController.swift */,
+			);
+			path = BBTabBar;
+			sourceTree = "<group>";
+		};
+		CFD0E9A9207BBAF300E58465 /* BBGestureBack */ = {
+			isa = PBXGroup;
+			children = (
+				CFD0E9B0207BBD1E00E58465 /* BBGestureBaseController.swift */,
+			);
+			path = BBGestureBack;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -351,8 +406,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CFD0E9A0207A67DA00E58465 /* AppDelegate.swift in Sources */,
+				CFD0E9AB207BBB3C00E58465 /* AppDelegate.swift in Sources */,
+				CFD0E9B1207BBD1E00E58465 /* BBGestureBaseController.swift in Sources */,
+				CFD0E9AF207BBCD800E58465 /* BBNavigationController.swift in Sources */,
+				CFD0E9AD207BBC9A00E58465 /* BBTabBarController.swift in Sources */,
+				CFD0E9A6207BBAA200E58465 /* UserViewController.swift in Sources */,
 				CFD0E99F207A67DA00E58465 /* ViewController.swift in Sources */,
+				CFD0E9A3207BBA5000E58465 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
