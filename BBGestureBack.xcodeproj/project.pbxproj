@@ -18,11 +18,10 @@
 		CEDECBDB205CC8BC00C08340 /* BBNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDECBDA205CC8BC00C08340 /* BBNavigationController.m */; };
 		CEDECBE0205CC94100C08340 /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDECBDF205CC94100C08340 /* UserViewController.m */; };
 		CEDECBE3205CCA4100C08340 /* BBGestureBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDECBE2205CCA4100C08340 /* BBGestureBaseController.m */; };
-		CFD0E96E207A621C00E58465 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD0E96D207A621C00E58465 /* AppDelegate.swift */; };
-		CFD0E970207A621C00E58465 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD0E96F207A621C00E58465 /* ViewController.swift */; };
-		CFD0E973207A621C00E58465 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFD0E971207A621C00E58465 /* Main.storyboard */; };
 		CFD0E975207A621C00E58465 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFD0E974207A621C00E58465 /* Assets.xcassets */; };
 		CFD0E978207A621C00E58465 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFD0E976207A621C00E58465 /* LaunchScreen.storyboard */; };
+		CFD0E99F207A67DA00E58465 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD0E99B207A67DA00E58465 /* ViewController.swift */; };
+		CFD0E9A0207A67DA00E58465 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD0E99D207A67DA00E58465 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,12 +47,11 @@
 		CEDECBE1205CCA4100C08340 /* BBGestureBaseController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBGestureBaseController.h; sourceTree = "<group>"; };
 		CEDECBE2205CCA4100C08340 /* BBGestureBaseController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBGestureBaseController.m; sourceTree = "<group>"; };
 		CFD0E96B207A621C00E58465 /* BBGestureBack_Full_swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BBGestureBack_Full_swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CFD0E96D207A621C00E58465 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CFD0E96F207A621C00E58465 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CFD0E972207A621C00E58465 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CFD0E974207A621C00E58465 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CFD0E977207A621C00E58465 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CFD0E979207A621C00E58465 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFD0E99B207A67DA00E58465 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CFD0E99D207A67DA00E58465 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,14 +192,45 @@
 		CFD0E96C207A621C00E58465 /* BBGestureBack_Full_swift */ = {
 			isa = PBXGroup;
 			children = (
-				CFD0E96D207A621C00E58465 /* AppDelegate.swift */,
-				CFD0E96F207A621C00E58465 /* ViewController.swift */,
-				CFD0E971207A621C00E58465 /* Main.storyboard */,
+				CFD0E999207A67DA00E58465 /* Classes */,
 				CFD0E974207A621C00E58465 /* Assets.xcassets */,
 				CFD0E976207A621C00E58465 /* LaunchScreen.storyboard */,
 				CFD0E979207A621C00E58465 /* Info.plist */,
 			);
 			path = BBGestureBack_Full_swift;
+			sourceTree = "<group>";
+		};
+		CFD0E999207A67DA00E58465 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				CFD0E99A207A67DA00E58465 /* Home */,
+				CFD0E99B207A67DA00E58465 /* ViewController.swift */,
+				CFD0E99C207A67DA00E58465 /* User */,
+				CFD0E99D207A67DA00E58465 /* AppDelegate.swift */,
+				CFD0E99E207A67DA00E58465 /* Main */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		CFD0E99A207A67DA00E58465 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		CFD0E99C207A67DA00E58465 /* User */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		CFD0E99E207A67DA00E58465 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,7 +325,6 @@
 			files = (
 				CFD0E978207A621C00E58465 /* LaunchScreen.storyboard in Resources */,
 				CFD0E975207A621C00E58465 /* Assets.xcassets in Resources */,
-				CFD0E973207A621C00E58465 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,8 +351,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CFD0E970207A621C00E58465 /* ViewController.swift in Sources */,
-				CFD0E96E207A621C00E58465 /* AppDelegate.swift in Sources */,
+				CFD0E9A0207A67DA00E58465 /* AppDelegate.swift in Sources */,
+				CFD0E99F207A67DA00E58465 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,14 +365,6 @@
 				CEDECB9E205CC3CD00C08340 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		CFD0E971207A621C00E58465 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CFD0E972207A621C00E58465 /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		CFD0E976207A621C00E58465 /* LaunchScreen.storyboard */ = {
@@ -496,8 +516,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = BBGestureBack_Full_swift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Bonway.BBGestureBack-Full-swift";
+				PRODUCT_BUNDLE_IDENTIFIER = Bonway.com.gestureBack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -512,8 +533,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = BBGestureBack_Full_swift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Bonway.BBGestureBack-Full-swift";
+				PRODUCT_BUNDLE_IDENTIFIER = Bonway.com.gestureBack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.0;
