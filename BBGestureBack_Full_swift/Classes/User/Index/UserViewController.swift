@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UserViewController: UIViewController {
+class UserViewController: BBGestureBaseController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

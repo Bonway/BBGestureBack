@@ -8,11 +8,18 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: BBGestureBaseController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let btn = UIButton()
+        btn.frame = CGRect(x: 100, y: 100, width: 100, height: 100)
+        
+        btn.backgroundColor = UIColor.red
+        btn.addTarget(self, action: #selector(pushClick), for: UIControlEvents.touchUpInside)
+        
+        self.view.addSubview(btn)
         
     }
 
@@ -21,6 +28,9 @@ class HomeViewController: UIViewController {
         
     }
     
+    @objc func pushClick() {
+        self.navigationController?.pushViewController(ViewController(), animated: true)
+    }
 
 
 }

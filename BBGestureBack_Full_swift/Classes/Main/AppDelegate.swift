@@ -12,10 +12,23 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var screenshotView: BBGestureBaseView?
+    var tabBarViewController : BBTabBarController?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.backgroundColor = UIColor.white
+        
+        tabBarViewController = BBTabBarController()
+        window?.rootViewController = tabBarViewController
+        
+        screenshotView = BBGestureBaseView.init(frame: CGRect(x: 0, y: 0, width: (window?.frame.size.width)!, height: (window?.frame.size.height)!))
+        window?.insertSubview(screenshotView!, at: 0)
+        screenshotView?.isHidden = true;
+        window?.makeKeyAndVisible()
+        
         return true
     }
 
