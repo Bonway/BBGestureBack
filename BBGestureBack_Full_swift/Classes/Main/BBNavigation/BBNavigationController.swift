@@ -1,14 +1,10 @@
-//
-//  BBNavigationController.swift
-//  BBGestureBack_Full_swift
-//
-//  Created by Bonway(黄邦伟) on 2018/4/9.
-//  Copyright © 2018年 Bonway. All rights reserved.
+//  代码地址: https://github.com/Bonway/BBGestureBack
+//  BBGestureBack
+//  Created by Bonway on 2016/3/17.
+//  Copyright © 2016年 Bonway. All rights reserved.
 //
 
 import UIKit
-
-let DISTANCE_TO_POP : CGFloat = 80.0
 
 class BBNavigationController: UINavigationController,UIGestureRecognizerDelegate,UINavigationControllerDelegate{
 
@@ -74,7 +70,7 @@ class BBNavigationController: UINavigationController,UIGestureRecognizerDelegate
         else if (panGesture.state == UIGestureRecognizerState.ended) {
             
             let point_inView = panGesture.translation(in: view)
-            if (point_inView.x >= DISTANCE_TO_POP) {
+            if (point_inView.x >= BBDistanceToLeft) {
                 UIView.animate(withDuration: 0.3, animations: {
                     rootVC?.view.transform = CGAffineTransform(translationX: 320, y: 0)
                     presentedVC?.view.transform = CGAffineTransform(translationX: 320, y: 0)

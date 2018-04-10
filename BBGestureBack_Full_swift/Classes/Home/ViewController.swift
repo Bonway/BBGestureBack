@@ -6,11 +6,10 @@
 
 import UIKit
 
-class UserViewController: BBGestureBaseController {
+class ViewController: BBGestureBaseController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
     }
 
@@ -18,7 +17,7 @@ class UserViewController: BBGestureBaseController {
         super.didReceiveMemoryWarning()
         
     }
-    
 
 
 }
+

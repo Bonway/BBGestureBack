@@ -1,12 +1,11 @@
-//
-//  BBGestureBaseController.swift
-//  BBGestureBack_Full_swift
-//
-//  Created by Bonway(黄邦伟) on 2018/4/9.
-//  Copyright © 2018年 Bonway. All rights reserved.
+//  代码地址: https://github.com/Bonway/BBGestureBack
+//  BBGestureBack
+//  Created by Bonway on 2016/3/17.
+//  Copyright © 2016年 Bonway. All rights reserved.
 //
 
 import UIKit
+//import BBGestureBackConst
 
 class BBGestureBaseController: UIViewController {
 
@@ -75,15 +74,15 @@ class BBGestureBaseView: UIView {
     
     public func showEffectChange(pt:CGPoint) {
         if (pt.x > 0) {
-            maskedView?.backgroundColor = UIColor.init(hue: 0, saturation: 0, brightness: 0, alpha: -pt.x / 320.0 * 0.4 + 0.4)
-            self.imgView?.transform = CGAffineTransform(scaleX: 0.95 + (pt.x / 320.0 * 0.05), y: 0.95 + (pt.x / 320.0 * 0.05))
+            maskedView?.backgroundColor = UIColor.init(hue: 0, saturation: 0, brightness: 0, alpha: -pt.x / UIScreen.main.bounds.width * 0.4 + 0.4)
+            self.imgView?.transform = CGAffineTransform(scaleX: BBWindowToScale + (pt.x / UIScreen.main.bounds.width * (1 - BBWindowToScale)), y: BBWindowToScale + (pt.x / UIScreen.main.bounds.width * (1 - BBWindowToScale)))
         }
     }
     
     public func restore() {
         if ((maskedView != nil) && (imgView != nil)) {
             maskedView?.backgroundColor = UIColor.init(hue: 0, saturation: 0, brightness: 0, alpha: 0.4)
-            imgView?.transform = CGAffineTransform(scaleX: 0.95, y: 0.95)
+            imgView?.transform = CGAffineTransform(scaleX: BBWindowToScale, y: BBWindowToScale)
         }
     }
     
@@ -96,6 +95,6 @@ class BBGestureBaseView: UIView {
         let imageRef = viewImage?.cgImage
         let sendImage = UIImage.init(cgImage: imageRef!)
         imgView?.image = sendImage
-        imgView?.transform = CGAffineTransform(scaleX: 0.95, y: 0.95)
+        imgView?.transform = CGAffineTransform(scaleX: BBWindowToScale, y: BBWindowToScale)
     }
 }

@@ -1,9 +1,7 @@
-//
-//  AppDelegate.swift
-//  BBGestureBack_Full_swift
-//
-//  Created by Bonway(黄邦伟) on 2018/4/8.
-//  Copyright © 2018年 Bonway. All rights reserved.
+//  代码地址: https://github.com/Bonway/BBGestureBack
+//  BBGestureBack
+//  Created by Bonway on 2016/3/17.
+//  Copyright © 2016年 Bonway. All rights reserved.
 //
 
 import UIKit

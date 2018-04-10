@@ -1,11 +1,8 @@
+//  代码地址: https://github.com/Bonway/BBGestureBack
+//  BBGestureBack
+//  Created by Bonway on 2016/3/17.
+//  Copyright © 2016年 Bonway. All rights reserved.
 //
-//  BBTabBarController.swift
-//  BBGestureBack_Full_swift
-//
-//  Created by Bonway(黄邦伟) on 2018/4/9.
-//  Copyright © 2018年 Bonway. All rights reserved.
-//
-
 import UIKit
 
 class BBTabBarController: UITabBarController {
@@ -27,7 +24,7 @@ class BBTabBarController: UITabBarController {
         vc.title = title
         vc.tabBarItem.image = image
         vc.tabBarItem.selectedImage = image
-        let navVC = UINavigationController(rootViewController: vc)
+        let navVC = BBNavigationController(rootViewController: vc)
         addChildViewController(navVC)
     }
 

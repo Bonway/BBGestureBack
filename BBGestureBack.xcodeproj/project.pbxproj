@@ -19,6 +19,7 @@
 		CEDECBE0205CC94100C08340 /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDECBDF205CC94100C08340 /* UserViewController.m */; };
 		CEDECBE3205CCA4100C08340 /* BBGestureBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDECBE2205CCA4100C08340 /* BBGestureBaseController.m */; };
 		CF9A6C07207C9DE3004DD232 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9A6C06207C9DE3004DD232 /* ViewController.swift */; };
+		CF9A6C0B207CA005004DD232 /* BBGestureBackConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9A6C0A207CA005004DD232 /* BBGestureBackConst.swift */; };
 		CFD0E975207A621C00E58465 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFD0E974207A621C00E58465 /* Assets.xcassets */; };
 		CFD0E978207A621C00E58465 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFD0E976207A621C00E58465 /* LaunchScreen.storyboard */; };
 		CFD0E9A3207BBA5000E58465 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD0E9A2207BBA5000E58465 /* HomeViewController.swift */; };
@@ -52,6 +53,7 @@
 		CEDECBE1205CCA4100C08340 /* BBGestureBaseController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBGestureBaseController.h; sourceTree = "<group>"; };
 		CEDECBE2205CCA4100C08340 /* BBGestureBaseController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBGestureBaseController.m; sourceTree = "<group>"; };
 		CF9A6C06207C9DE3004DD232 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CF9A6C0A207CA005004DD232 /* BBGestureBackConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBGestureBackConst.swift; sourceTree = "<group>"; };
 		CFD0E96B207A621C00E58465 /* BBGestureBack_Full_swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BBGestureBack_Full_swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFD0E974207A621C00E58465 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CFD0E977207A621C00E58465 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -283,6 +285,7 @@
 		CFD0E9A9207BBAF300E58465 /* BBGestureBack */ = {
 			isa = PBXGroup;
 			children = (
+				CF9A6C0A207CA005004DD232 /* BBGestureBackConst.swift */,
 				CFD0E9B0207BBD1E00E58465 /* BBGestureBaseController.swift */,
 			);
 			path = BBGestureBack;
@@ -412,6 +415,7 @@
 				CFD0E9AD207BBC9A00E58465 /* BBTabBarController.swift in Sources */,
 				CF9A6C07207C9DE3004DD232 /* ViewController.swift in Sources */,
 				CFD0E9A6207BBAA200E58465 /* UserViewController.swift in Sources */,
+				CF9A6C0B207CA005004DD232 /* BBGestureBackConst.swift in Sources */,
 				CFD0E9A3207BBA5000E58465 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
