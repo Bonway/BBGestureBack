@@ -42,9 +42,9 @@ static char szListenTabbarViewMove[] = "listenTabViewMove";
         self.backgroundColor = [UIColor blackColor];
         self.imgView = [[UIImageView alloc] initWithFrame:self.bounds];
         self.maskView = [[UIView alloc] initWithFrame:self.bounds];
-        _maskView.backgroundColor = [UIColor colorWithHue:0 saturation:0 brightness:0 alpha:0.4];
-        [self addSubview:_imgView];
-        [self addSubview:_maskView];
+        self.maskView.backgroundColor = [UIColor colorWithHue:0 saturation:0 brightness:0 alpha:BBMaskingAlpha];
+        [self addSubview: self.imgView];
+        [self addSubview: self.maskView];
         [[AppDelegate shareAppDelegate].window.rootViewController.view addObserver:self forKeyPath:@"transform" options:NSKeyValueObservingOptionNew context:szListenTabbarViewMove];
     }
     return self;
@@ -56,20 +56,18 @@ static char szListenTabbarViewMove[] = "listenTabViewMove";
         [self showEffectChange:CGPointMake(newTransform.tx, 0) ];
     }
 }
-- (void)layoutSubviews{
-    [super layoutSubviews];
-}
+
 - (void)showEffectChange:(CGPoint)pt{
     if (pt.x > 0){
-        _maskView.backgroundColor = [UIColor colorWithHue:0 saturation:0 brightness:0 alpha:-pt.x / ([UIScreen mainScreen].bounds.size.width) * 0.4 + 0.4];
-        _imgView.transform = CGAffineTransformMakeScale(BBWindeowToScale + (pt.x / ([UIScreen mainScreen].bounds.size.width) * (1 - BBWindeowToScale)), BBWindeowToScale + (pt.x / ([UIScreen mainScreen].bounds.size.width) * (1 - BBWindeowToScale)));
+        _maskView.backgroundColor = [UIColor colorWithHue:0 saturation:0 brightness:0 alpha:-pt.x / ([UIScreen mainScreen].bounds.size.width) * BBMaskingAlpha + BBMaskingAlpha];
+        _imgView.transform = CGAffineTransformMakeScale(BBWindowToScale + (pt.x / ([UIScreen mainScreen].bounds.size.width) * (1 - BBWindowToScale)), BBWindowToScale + (pt.x / ([UIScreen mainScreen].bounds.size.width) * (1 - BBWindowToScale)));
     }
 }
 
 - (void)restore {
     if (_maskView && _imgView){
-        _maskView.backgroundColor = [UIColor colorWithHue:0 saturation:0 brightness:0 alpha:0.4];
-        _imgView.transform = CGAffineTransformMakeScale(BBWindeowToScale, BBWindeowToScale);
+        _maskView.backgroundColor = [UIColor colorWithHue:0 saturation:0 brightness:0 alpha:BBMaskingAlpha];
+        _imgView.transform = CGAffineTransformMakeScale(BBWindowToScale, BBWindowToScale);
     }
 }
 
@@ -82,10 +80,14 @@ static char szListenTabbarViewMove[] = "listenTabViewMove";
     CGImageRef imageRef = viewImage.CGImage;
     UIImage *sendImage = [[UIImage alloc] initWithCGImage:imageRef];
     self.imgView.image = sendImage;
-    self.imgView.transform = CGAffineTransformMakeScale(BBWindeowToScale, BBWindeowToScale);
+    self.imgView.transform = CGAffineTransformMakeScale(BBWindowToScale, BBWindowToScale);
 }
 
 - (void)dealloc{
     [[AppDelegate shareAppDelegate].window.rootViewController.view removeObserver:self forKeyPath:@"transform" context:szListenTabbarViewMove];
+}
+
+- (void)layoutSubviews{
+    [super layoutSubviews];
 }
 @end

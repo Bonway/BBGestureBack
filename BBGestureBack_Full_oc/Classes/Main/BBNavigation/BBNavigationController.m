@@ -10,7 +10,6 @@
 #import "BBGestureBackConst.h"
 #import "AppDelegate.h"
 @interface BBNavigationController ()<UIGestureRecognizerDelegate,UINavigationControllerDelegate>
-
 @end
 
 @implementation BBNavigationController
@@ -79,15 +78,15 @@
     }
     else if (panGesture.state == UIGestureRecognizerStateChanged) {
         CGPoint point_inView = [panGesture translationInView:self.view];
-        if (point_inView.x >= 10) {
-            rootVC.view.transform = CGAffineTransformMakeTranslation(point_inView.x - 10, 0);
-            presentedVC.view.transform = CGAffineTransformMakeTranslation(point_inView.x - 10, 0);
+        if (point_inView.x >= BBDistanceToPan) {
+            rootVC.view.transform = CGAffineTransformMakeTranslation(point_inView.x - BBDistanceToPan, 0);
+            presentedVC.view.transform = CGAffineTransformMakeTranslation(point_inView.x - BBDistanceToPan, 0);
         }
     }
     else if (panGesture.state == UIGestureRecognizerStateEnded) {
         CGPoint point_inView = [panGesture translationInView:self.view];
         if (point_inView.x >= BBDistanceToLeft) {
-            [UIView animateWithDuration:0.3 animations:^{
+            [UIView animateWithDuration:BBGestureSpeed animations:^{
                 rootVC.view.transform = CGAffineTransformMakeTranslation(([UIScreen mainScreen].bounds.size.width), 0);
                 presentedVC.view.transform = CGAffineTransformMakeTranslation(([UIScreen mainScreen].bounds.size.width), 0);
             } completion:^(BOOL finished) {
@@ -98,7 +97,7 @@
             }];
         }
         else {
-            [UIView animateWithDuration:0.3 animations:^{
+            [UIView animateWithDuration:BBGestureSpeed animations:^{
                 rootVC.view.transform = CGAffineTransformIdentity;
                 presentedVC.view.transform = CGAffineTransformIdentity;
             } completion:^(BOOL finished) {
@@ -132,7 +131,7 @@
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
     if (self.viewControllers.count == 0) {
         return [super pushViewController:viewController animated:animated];
-    }else if (self.viewControllers.count>=1) {
+    }else if (self.viewControllers.count >= 1) {
         viewController.hidesBottomBarWhenPushed = YES;
     }
     AppDelegate *appdelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;

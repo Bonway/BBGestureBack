@@ -18,6 +18,7 @@
     
     UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(100, 100, 100, 100)];
     btn.backgroundColor = [UIColor redColor];
+    [btn setTitle:@"push" forState:UIControlStateNormal];
     [btn addTarget:self action:@selector(pushClick) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn];
 }

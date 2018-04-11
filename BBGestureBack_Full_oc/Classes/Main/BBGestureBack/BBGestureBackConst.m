@@ -9,4 +9,7 @@
 
 
 const CGFloat BBDistanceToLeft = 70.0;
-const CGFloat BBWindeowToScale = 0.95;
+const CGFloat BBWindowToScale = 0.95;
+const CGFloat BBMaskingAlpha = 0.9;
+const CGFloat BBGestureSpeed = 0.25;
+const CGFloat BBDistanceToPan = 10;
