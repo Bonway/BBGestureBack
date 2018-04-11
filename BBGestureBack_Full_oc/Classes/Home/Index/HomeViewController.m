@@ -16,17 +16,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(100, 100, 100, 100)];
-    btn.backgroundColor = [UIColor redColor];
-    [btn setTitle:@"push" forState:UIControlStateNormal];
-    [btn addTarget:self action:@selector(pushClick) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:btn];
+    UIButton *sysBtn = [[UIButton alloc]initWithFrame:CGRectMake(100, 250, 100, 100)];
+    sysBtn.backgroundColor = [UIColor blueColor];
+    [sysBtn setTitle:@"sysPush" forState:UIControlStateNormal];
+    [sysBtn addTarget:self action:@selector(sysPushClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:sysBtn];
 }
 
--(void)pushClick{
+
+-(void)sysPushClick{
     [self.navigationController pushViewController:[ViewController new] animated:YES];
 }
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     

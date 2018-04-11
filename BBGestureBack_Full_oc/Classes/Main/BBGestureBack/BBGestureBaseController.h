@@ -8,7 +8,10 @@
 #import <UIKit/UIKit.h>
 
 @interface BBGestureBaseController : UIViewController
-@property (nonatomic) Boolean gestureEnabled;// default is YES. 
+@property (nonatomic) Boolean gestureEnabled;// default is YES.
+
+- (void)bb_popViewController:(UINavigationController *)navigationController;
+
 @end
 
 

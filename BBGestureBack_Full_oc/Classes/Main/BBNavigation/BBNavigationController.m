@@ -144,6 +144,7 @@
     [super pushViewController:viewController animated:animated];
 }
 - (UIViewController *)popViewControllerAnimated:(BOOL)animated {
+    
     AppDelegate *appdelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
     [self.arrayScreenshot removeLastObject];
     UIImage *image = [self.arrayScreenshot lastObject];

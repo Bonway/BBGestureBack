@@ -29,6 +29,30 @@ static char szListenTabbarViewMove[] = "listenTabViewMove";
     [super viewDidLoad];
 }
 
+
+
+- (void)bb_popViewController:(UINavigationController *)navigationController{
+    
+    AppDelegate *appdelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    UIViewController *rootVC = appdelegate.window.rootViewController;
+    UIViewController *presentedVC = rootVC.presentedViewController;
+    appdelegate.gestureBaseView.hidden = NO;
+    
+    appdelegate.gestureBaseView.maskView.backgroundColor = [UIColor colorWithHue:0 saturation:0 brightness:0 alpha:BBMaskingAlpha];
+    appdelegate.gestureBaseView.imgView.transform = CGAffineTransformMakeScale(BBWindowToScale, BBWindowToScale);
+    
+    [UIView animateWithDuration:BBGestureSpeed animations:^{
+        rootVC.view.transform = CGAffineTransformMakeTranslation(([UIScreen mainScreen].bounds.size.width), 0);
+        presentedVC.view.transform = CGAffineTransformMakeTranslation(([UIScreen mainScreen].bounds.size.width), 0);
+    } completion:^(BOOL finished) {
+        [navigationController popViewControllerAnimated:NO];
+        rootVC.view.transform = CGAffineTransformIdentity;
+        presentedVC.view.transform = CGAffineTransformIdentity;
+        appdelegate.gestureBaseView.hidden = YES;
+    }];
+}
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
@@ -58,9 +82,14 @@ static char szListenTabbarViewMove[] = "listenTabViewMove";
 }
 
 - (void)showEffectChange:(CGPoint)pt{
+
     if (pt.x > 0){
         _maskView.backgroundColor = [UIColor colorWithHue:0 saturation:0 brightness:0 alpha:-pt.x / ([UIScreen mainScreen].bounds.size.width) * BBMaskingAlpha + BBMaskingAlpha];
         _imgView.transform = CGAffineTransformMakeScale(BBWindowToScale + (pt.x / ([UIScreen mainScreen].bounds.size.width) * (1 - BBWindowToScale)), BBWindowToScale + (pt.x / ([UIScreen mainScreen].bounds.size.width) * (1 - BBWindowToScale)));
+    }
+    if (pt.x < 0){
+        _maskView.backgroundColor = [UIColor colorWithHue:0 saturation:0 brightness:0 alpha:0.5];
+        _imgView.transform = CGAffineTransformIdentity;
     }
 }
 
