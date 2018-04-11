@@ -16,6 +16,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+
+    
     UIButton *sysBtn = [[UIButton alloc]initWithFrame:CGRectMake(100, 250, 100, 100)];
     sysBtn.backgroundColor = [UIColor blueColor];
     [sysBtn setTitle:@"sysPush" forState:UIControlStateNormal];

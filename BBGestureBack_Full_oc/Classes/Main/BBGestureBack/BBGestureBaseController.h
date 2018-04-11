@@ -10,8 +10,9 @@
 @interface BBGestureBaseController : UIViewController
 @property (nonatomic) Boolean gestureEnabled;// default is YES.
 
-- (void)bb_popViewController:(UINavigationController *)navigationController;
-
+- (void)bb_popViewController;
+- (void)bb_popToRootViewController;
+- (void)bb_popToViewController:(UIViewController *)viewController;
 @end
 
 

@@ -9,6 +9,14 @@
 #import <QuartzCore/QuartzCore.h>
 #import "AppDelegate.h"
 #import "BBGestureBackConst.h"
+
+typedef enum _BBPopType {
+    BBPopTypeViewController  = 0,
+    BBPopTypeToViewController,
+    BBPopTypeToRootViewController
+} BBPopType;
+
+
 static char szListenTabbarViewMove[] = "listenTabViewMove";
 
 @interface BBGestureBaseController ()
@@ -30,9 +38,7 @@ static char szListenTabbarViewMove[] = "listenTabViewMove";
 }
 
 
-
-- (void)bb_popViewController:(UINavigationController *)navigationController{
-    
+-(void)bb_basePopViewController:(UIViewController *)viewController PopType:(BBPopType)popType{
     AppDelegate *appdelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
     UIViewController *rootVC = appdelegate.window.rootViewController;
     UIViewController *presentedVC = rootVC.presentedViewController;
@@ -45,11 +51,35 @@ static char szListenTabbarViewMove[] = "listenTabViewMove";
         rootVC.view.transform = CGAffineTransformMakeTranslation(([UIScreen mainScreen].bounds.size.width), 0);
         presentedVC.view.transform = CGAffineTransformMakeTranslation(([UIScreen mainScreen].bounds.size.width), 0);
     } completion:^(BOOL finished) {
-        [navigationController popViewControllerAnimated:NO];
+        switch (popType) {
+            case BBPopTypeViewController:
+                [self.navigationController popViewControllerAnimated:NO];
+                break;
+            case BBPopTypeToViewController:
+                [self.navigationController popToViewController:viewController animated:NO];
+                break;
+            case BBPopTypeToRootViewController:
+                [self.navigationController popToRootViewControllerAnimated:NO];
+                break;
+            default:
+                break;
+        }
         rootVC.view.transform = CGAffineTransformIdentity;
         presentedVC.view.transform = CGAffineTransformIdentity;
         appdelegate.gestureBaseView.hidden = YES;
     }];
+}
+
+- (void)bb_popViewController{
+    [self bb_basePopViewController:nil PopType:BBPopTypeViewController];
+}
+
+-(void)bb_popToRootViewController{
+    [self bb_basePopViewController:nil PopType:BBPopTypeToRootViewController];
+}
+
+-(void)bb_popToViewController:(UIViewController *)viewController{
+    [self bb_basePopViewController:viewController PopType:BBPopTypeToViewController];
 }
 
 
