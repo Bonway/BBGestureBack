@@ -5,7 +5,6 @@
 //
 
 import UIKit
-//import BBGestureBackConst
 
 enum BBPopType:Int{
     case viewController = 0
