@@ -1,6 +1,6 @@
 # BBGestureBack
 
-Full screen return gesture
+Full screen return gesture（全屏手势返回 滑动返回 pop 动画效果）
 
 [如果你在天朝，请点击这里，速度会很快哦~](https://blog.csdn.net/Bonway_Huang/article/details/50505975) 
 
