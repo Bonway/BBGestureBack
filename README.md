@@ -7,6 +7,12 @@ Full screen return gesture
 
 [github：BBGestureBack下载](https://github.com/Bonway/BBGestureBack) 
 
+![淘宝效果](https://img-blog.csdn.net/20180412233944808?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0JvbndheV9IdWFuZw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+![京东效果](https://img-blog.csdn.net/20180412234031564?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0JvbndheV9IdWFuZw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+![腾讯效果](https://img-blog.csdn.net/20180412234056306?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0JvbndheV9IdWFuZw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+![斗鱼效果](https://img-blog.csdn.net/20180412234125452?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0JvbndheV9IdWFuZw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+
+
 ####  支持OC、Swift ####
 BBGestureBack不仅支持OC还支持Swift，iOS主流的手势返回、滑动返回、pop动画效果都有，适配各种iPhone，嵌入简单，只需按照Demo集成，就能完美使用。（集成最简单、功能最全面）
 
