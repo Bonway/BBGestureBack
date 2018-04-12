@@ -14,8 +14,8 @@ class HomeViewController: BBGestureBaseController {
         let btn = UIButton()
         btn.frame = CGRect(x: 100, y: 100, width: 100, height: 100)
         
-        btn.backgroundColor = UIColor.red
-        btn.setTitle("push", for: UIControlState.normal)
+        btn.backgroundColor = UIColor.blue
+        btn.setTitle("sysPush", for: UIControlState.normal)
         btn.addTarget(self, action: #selector(pushClick), for: UIControlEvents.touchUpInside)
         
         self.view.addSubview(btn)

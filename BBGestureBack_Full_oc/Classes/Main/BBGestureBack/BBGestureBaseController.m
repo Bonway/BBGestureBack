@@ -17,7 +17,7 @@ typedef enum _BBPopType {
 } BBPopType;
 
 
-static char szListenTabbarViewMove[] = "listenTabViewMove";
+static char bbListenTabbarViewMove[] = "bbListenTabbarViewMove";
 
 @interface BBGestureBaseController ()
 
@@ -28,7 +28,7 @@ static char szListenTabbarViewMove[] = "listenTabViewMove";
 - (id)init{
     self = [super init];
     if (self) {
-        self.gestureEnabled = YES;
+        self.isEnablePanGesture = YES;
     }
     return self;
 }
@@ -38,14 +38,16 @@ static char szListenTabbarViewMove[] = "listenTabViewMove";
 }
 
 
+
+
 -(void)bb_basePopViewController:(UIViewController *)viewController PopType:(BBPopType)popType{
-    AppDelegate *appdelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
-    UIViewController *rootVC = appdelegate.window.rootViewController;
+    AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    UIViewController *rootVC = appDelegate.window.rootViewController;
     UIViewController *presentedVC = rootVC.presentedViewController;
-    appdelegate.gestureBaseView.hidden = NO;
+    appDelegate.gestureBaseView.hidden = NO;
     
-    appdelegate.gestureBaseView.maskView.backgroundColor = [UIColor colorWithHue:0 saturation:0 brightness:0 alpha:BBMaskingAlpha];
-    appdelegate.gestureBaseView.imgView.transform = CGAffineTransformMakeScale(BBWindowToScale, BBWindowToScale);
+    appDelegate.gestureBaseView.maskView.backgroundColor = [UIColor colorWithHue:0 saturation:0 brightness:0 alpha:BBMaskingAlpha];
+    appDelegate.gestureBaseView.imgView.transform = CGAffineTransformMakeScale(BBWindowToScale, BBWindowToScale);
     
     [UIView animateWithDuration:BBGestureSpeed animations:^{
         rootVC.view.transform = CGAffineTransformMakeTranslation(([UIScreen mainScreen].bounds.size.width), 0);
@@ -66,7 +68,7 @@ static char szListenTabbarViewMove[] = "listenTabViewMove";
         }
         rootVC.view.transform = CGAffineTransformIdentity;
         presentedVC.view.transform = CGAffineTransformIdentity;
-        appdelegate.gestureBaseView.hidden = YES;
+        appDelegate.gestureBaseView.hidden = YES;
     }];
 }
 
@@ -99,12 +101,12 @@ static char szListenTabbarViewMove[] = "listenTabViewMove";
         self.maskView.backgroundColor = [UIColor colorWithHue:0 saturation:0 brightness:0 alpha:BBMaskingAlpha];
         [self addSubview: self.imgView];
         [self addSubview: self.maskView];
-        [[AppDelegate shareAppDelegate].window.rootViewController.view addObserver:self forKeyPath:@"transform" options:NSKeyValueObservingOptionNew context:szListenTabbarViewMove];
+        [[AppDelegate shareAppDelegate].window.rootViewController.view addObserver:self forKeyPath:@"transform" options:NSKeyValueObservingOptionNew context:bbListenTabbarViewMove];
     }
     return self;
 }
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context{
-    if (context == szListenTabbarViewMove){
+    if (context == bbListenTabbarViewMove){
         NSValue *value  = [change objectForKey:NSKeyValueChangeNewKey];
         CGAffineTransform newTransform = [value CGAffineTransformValue];
         [self showEffectChange:CGPointMake(newTransform.tx, 0) ];
@@ -131,9 +133,9 @@ static char szListenTabbarViewMove[] = "listenTabViewMove";
 }
 
 - (void)screenShot{
-    AppDelegate *appdelegate = (AppDelegate*)[UIApplication sharedApplication].delegate;
+    AppDelegate *appDelegate = (AppDelegate*)[UIApplication sharedApplication].delegate;
     UIGraphicsBeginImageContextWithOptions(CGSizeMake([UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height), YES, 0);
-    [appdelegate.window.layer renderInContext:UIGraphicsGetCurrentContext()];
+    [appDelegate.window.layer renderInContext:UIGraphicsGetCurrentContext()];
     UIImage *viewImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     CGImageRef imageRef = viewImage.CGImage;
@@ -143,7 +145,7 @@ static char szListenTabbarViewMove[] = "listenTabViewMove";
 }
 
 - (void)dealloc{
-    [[AppDelegate shareAppDelegate].window.rootViewController.view removeObserver:self forKeyPath:@"transform" context:szListenTabbarViewMove];
+    [[AppDelegate shareAppDelegate].window.rootViewController.view removeObserver:self forKeyPath:@"transform" context:bbListenTabbarViewMove];
 }
 
 - (void)layoutSubviews{

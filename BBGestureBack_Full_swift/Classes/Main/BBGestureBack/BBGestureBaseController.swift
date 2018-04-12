@@ -7,6 +7,12 @@
 import UIKit
 //import BBGestureBackConst
 
+enum BBPopType:Int{
+    case viewController = 0
+    case toViewController
+    case toRootViewController
+}
+
 class BBGestureBaseController: UIViewController {
 
     /**
@@ -30,6 +36,51 @@ class BBGestureBaseController: UIViewController {
         view.backgroundColor = UIColor.white
     }
     
+    private func bb_basePopViewController(viewController: UIViewController?,popType: BBPopType) {
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let rootVC = appDelegate.window?.rootViewController
+        let presentedVC = rootVC?.presentedViewController
+        appDelegate.gestureBaseView?.isHidden = false;
+        
+        appDelegate.gestureBaseView?.maskedView?.backgroundColor = UIColor.init(hue: 0, saturation: 0, brightness: 0, alpha: BBMaskingAlpha)
+        appDelegate.gestureBaseView?.imgView?.transform = CGAffineTransform(scaleX: BBWindowToScale, y: BBWindowToScale);
+        
+        
+        UIView.animate(withDuration: BBGestureSpeed, animations: {
+            rootVC?.view.transform = CGAffineTransform(translationX: (UIScreen.main.bounds.size.width), y: 0);
+            presentedVC?.view.transform = CGAffineTransform(translationX: (UIScreen.main.bounds.size.width), y: 0);
+        }) { (finished) in
+            switch popType {
+                case .viewController:
+                    self.navigationController?.popViewController(animated: false)
+                case .toViewController:
+                    self.navigationController?.popToViewController(viewController!, animated: false)
+                case .toRootViewController:
+                    self.navigationController?.popToRootViewController(animated: false)
+            }
+            rootVC?.view.transform = CGAffineTransform.identity;
+            presentedVC?.view.transform = CGAffineTransform.identity;
+            appDelegate.gestureBaseView?.isHidden = true;
+        }
+        
+    }
+    
+    func bb_popViewController() {
+        
+        self.bb_basePopViewController(viewController: nil, popType: BBPopType.viewController)
+    }
+    
+    func bb_popToViewController(viewController: UIViewController) {
+        
+        self.bb_basePopViewController(viewController: viewController, popType: BBPopType.toViewController)
+    }
+    
+    func bb_popToRootViewController() {
+        
+        self.bb_basePopViewController(viewController: nil, popType: BBPopType.toRootViewController)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -41,7 +92,7 @@ class BBGestureBaseView: UIView {
     var imgView : UIImageView?
     var maskedView : UIView?
     var arrayImage : NSMutableArray?
-    private var vvListenTabbarViewMove = "vvListenTabbarViewMove"
+    private var bbListenTabbarViewMove = "bbListenTabbarViewMove"
     
     override init(frame:CGRect){
         super.init(frame: frame)
@@ -53,7 +104,7 @@ class BBGestureBaseView: UIView {
         self.addSubview(imgView!)
         self.addSubview(maskedView!)
         
-        (UIApplication.shared.delegate as! AppDelegate).window?.rootViewController?.view.addObserver(self, forKeyPath: "transform", options: NSKeyValueObservingOptions.new, context: &vvListenTabbarViewMove)
+        (UIApplication.shared.delegate as! AppDelegate).window?.rootViewController?.view.addObserver(self, forKeyPath: "transform", options: NSKeyValueObservingOptions.new, context: &bbListenTabbarViewMove)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -61,7 +112,7 @@ class BBGestureBaseView: UIView {
     }
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-        if (context == &vvListenTabbarViewMove) {
+        if (context == &bbListenTabbarViewMove) {
             let value = change?[NSKeyValueChangeKey.newKey] as! NSValue
             let newTransform = value.cgAffineTransformValue
             showEffectChange(pt: CGPoint(x: newTransform.tx, y: 0))

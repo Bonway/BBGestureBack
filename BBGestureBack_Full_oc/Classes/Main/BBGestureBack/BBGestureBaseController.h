@@ -8,11 +8,11 @@
 #import <UIKit/UIKit.h>
 
 @interface BBGestureBaseController : UIViewController
-@property (nonatomic) Boolean gestureEnabled;// default is YES.
+@property (nonatomic) Boolean isEnablePanGesture;// default is YES.
 
 - (void)bb_popViewController;
-- (void)bb_popToRootViewController;
 - (void)bb_popToViewController:(UIViewController *)viewController;
+- (void)bb_popToRootViewController;
 @end
 
 

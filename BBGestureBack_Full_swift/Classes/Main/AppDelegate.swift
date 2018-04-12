@@ -10,7 +10,7 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var screenshotView: BBGestureBaseView?
+    var gestureBaseView: BBGestureBaseView?
     var tabBarViewController : BBTabBarController?
 
 
@@ -22,9 +22,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         tabBarViewController = BBTabBarController()
         window?.rootViewController = tabBarViewController
         
-        screenshotView = BBGestureBaseView.init(frame: CGRect(x: 0, y: 0, width: (window?.frame.size.width)!, height: (window?.frame.size.height)!))
-        window?.insertSubview(screenshotView!, at: 0)
-        screenshotView?.isHidden = true;
+        gestureBaseView = BBGestureBaseView.init(frame: CGRect(x: 0, y: 0, width: (window?.frame.size.width)!, height: (window?.frame.size.height)!))
+        window?.insertSubview(gestureBaseView!, at: 0)
+        gestureBaseView?.isHidden = true;
         window?.makeKeyAndVisible()
         
         return true

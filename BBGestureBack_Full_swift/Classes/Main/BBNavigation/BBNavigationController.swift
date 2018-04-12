@@ -58,7 +58,7 @@ class BBNavigationController: UINavigationController,UIGestureRecognizerDelegate
             return
         }
         if (panGesture.state == UIGestureRecognizerState.began) {
-            appDelegate.screenshotView?.isHidden = false;
+            appDelegate.gestureBaseView?.isHidden = false;
         }
         else if (panGesture.state == UIGestureRecognizerState.changed) {
             let point_inView = panGesture.translation(in: view)
@@ -78,14 +78,14 @@ class BBNavigationController: UINavigationController,UIGestureRecognizerDelegate
                     self.popViewController(animated: false)
                     rootVC?.view.transform = CGAffineTransform.identity
                     presentedVC?.view.transform = CGAffineTransform.identity
-                    appDelegate.screenshotView?.isHidden = true
+                    appDelegate.gestureBaseView?.isHidden = true
                 })
             } else {
                 UIView.animate(withDuration: 0.3, animations: {
                     rootVC?.view.transform = CGAffineTransform.identity
                     presentedVC?.view.transform = CGAffineTransform.identity
                 }, completion: { (true) in
-                    appDelegate.screenshotView?.isHidden = true
+                    appDelegate.gestureBaseView?.isHidden = true
                 })
             }
         }
@@ -106,7 +106,7 @@ class BBNavigationController: UINavigationController,UIGestureRecognizerDelegate
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         arrayScreenshot.add(image!)
-        appDelegate.screenshotView?.imgView?.image = image
+        appDelegate.gestureBaseView?.imgView?.image = image
         super.pushViewController(viewController, animated: animated)
     }
     
@@ -116,7 +116,7 @@ class BBNavigationController: UINavigationController,UIGestureRecognizerDelegate
         arrayScreenshot.removeLastObject()
         let image = arrayScreenshot.lastObject
         if (image != nil) {
-            appDelegate.screenshotView?.imgView?.image = image as! UIImage?;
+            appDelegate.gestureBaseView?.imgView?.image = image as! UIImage?;
         }
         return super.popViewController(animated: animated)
     }
@@ -128,7 +128,7 @@ class BBNavigationController: UINavigationController,UIGestureRecognizerDelegate
         }
         let image = arrayScreenshot.lastObject
         if (image != nil) {
-            appDelegate.screenshotView?.imgView?.image = image as! UIImage?
+            appDelegate.gestureBaseView?.imgView?.image = image as! UIImage?
         }
         return super.popToRootViewController(animated: animated)
     }

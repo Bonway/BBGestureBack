@@ -33,7 +33,7 @@
 - (BOOL)gestureRecognizerShouldBegin:(UIPanGestureRecognizer *)gestureRecognizer {
     if (gestureRecognizer.view == self.view) {
         BBGestureBaseController *topView = (BBGestureBaseController *)self.topViewController;
-        if (!topView.gestureEnabled)
+        if (!topView.isEnablePanGesture)
             return NO;
         else {
             CGPoint translate = [gestureRecognizer translationInView:self.view];
@@ -67,14 +67,14 @@
 }
 
 - (void)handlePanGesture:(UIPanGestureRecognizer *)panGesture {
-    AppDelegate *appdelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
-    UIViewController *rootVC = appdelegate.window.rootViewController;
+    AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    UIViewController *rootVC = appDelegate.window.rootViewController;
     UIViewController *presentedVC = rootVC.presentedViewController;
     if (self.viewControllers.count == 1) {
         return;
     }
     if (panGesture.state == UIGestureRecognizerStateBegan) {
-        appdelegate.gestureBaseView.hidden = NO;
+        appDelegate.gestureBaseView.hidden = NO;
     }
     else if (panGesture.state == UIGestureRecognizerStateChanged) {
         CGPoint point_inView = [panGesture translationInView:self.view];
@@ -93,7 +93,7 @@
                 [self popViewControllerAnimated:NO];
                 rootVC.view.transform = CGAffineTransformIdentity;
                 presentedVC.view.transform = CGAffineTransformIdentity;
-                appdelegate.gestureBaseView.hidden = YES;
+                appDelegate.gestureBaseView.hidden = YES;
             }];
         }
         else {
@@ -101,7 +101,7 @@
                 rootVC.view.transform = CGAffineTransformIdentity;
                 presentedVC.view.transform = CGAffineTransformIdentity;
             } completion:^(BOOL finished) {
-                appdelegate.gestureBaseView.hidden = YES;
+                appDelegate.gestureBaseView.hidden = YES;
             }];
         }
     }
@@ -109,7 +109,7 @@
 
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
     BBGestureBaseController *topView = (BBGestureBaseController *)self.topViewController;
-    if (topView.gestureEnabled == NO)     return NO;
+    if (topView.isEnablePanGesture == NO)     return NO;
     if (self.viewControllers.count <= 1)    return NO;
     if ([gestureRecognizer isKindOfClass:[UIPanGestureRecognizer class]]) {
         CGPoint point = [touch locationInView:gestureRecognizer.view];
