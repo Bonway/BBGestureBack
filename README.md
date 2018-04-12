@@ -1,17 +1,15 @@
 # BBGestureBack
+
 Full screen return gesture
-### BBGestureBack ###
 
+[如果你在天朝，请点击这里，速度会很快哦~](https://blog.csdn.net/Bonway_Huang/article/details/50505975) 
 
-####  这种手势主流App ####
-
-[github：BBGestureBack下载](https://github.com/Bonway/BBGestureBack) 
+####  这种手势主流App,如：淘宝、京东、腾讯等等 ####
 
 ![淘宝效果](https://img-blog.csdn.net/20180412233944808?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0JvbndheV9IdWFuZw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
 ![京东效果](https://img-blog.csdn.net/20180412234031564?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0JvbndheV9IdWFuZw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
 ![腾讯效果](https://img-blog.csdn.net/20180412234056306?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0JvbndheV9IdWFuZw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
 ![斗鱼效果](https://img-blog.csdn.net/20180412234125452?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0JvbndheV9IdWFuZw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
-
 
 ####  支持OC、Swift ####
 BBGestureBack不仅支持OC还支持Swift，iOS主流的手势返回、滑动返回、pop动画效果都有，适配各种iPhone，嵌入简单，只需按照Demo集成，就能完美使用。（集成最简单、功能最全面）
@@ -40,7 +38,7 @@ BBGestureBack不仅支持OC还支持Swift，iOS主流的手势返回、滑动返
 
 ```
 UIKIT_EXTERN const CGFloat BBDistanceToLeft;//距离左边响应的范围
-UIKIT_EXTERN const CGFloat BBWindowToScale;//缩放大小
+UIKIT_EXTERN const CGFloat BBWindowToScale;//缩放大小（淘宝、京东没有缩放）
 UIKIT_EXTERN const CGFloat BBMaskingAlpha;//背景透明度
 UIKIT_EXTERN const CGFloat BBGestureSpeed;//返回的速度
 UIKIT_EXTERN const CGFloat BBDistanceToPan;//手势拖拽的长度
