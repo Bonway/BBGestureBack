@@ -18,6 +18,15 @@
 		CEDECBDB205CC8BC00C08340 /* BBNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDECBDA205CC8BC00C08340 /* BBNavigationController.m */; };
 		CEDECBE0205CC94100C08340 /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDECBDF205CC94100C08340 /* UserViewController.m */; };
 		CEDECBE3205CCA4100C08340 /* BBGestureBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDECBE2205CCA4100C08340 /* BBGestureBaseController.m */; };
+		CF73731D20B5592C00BBE7AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF73731C20B5592C00BBE7AC /* Assets.xcassets */; };
+		CF73732020B5592C00BBE7AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF73731E20B5592C00BBE7AC /* LaunchScreen.storyboard */; };
+		CF73732320B5592C00BBE7AC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CF73732220B5592C00BBE7AC /* main.m */; };
+		CF73734C20B559D200BBE7AC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF73734520B559D200BBE7AC /* ViewController.m */; };
+		CF73734D20B559D200BBE7AC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CF73734B20B559D200BBE7AC /* AppDelegate.m */; };
+		CF73735120B55B0D00BBE7AC /* BBNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF73735020B55B0D00BBE7AC /* BBNavigationController.m */; };
+		CF73735520B55CA400BBE7AC /* BBTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF73735420B55CA400BBE7AC /* BBTabBarController.m */; };
+		CF73735820B55D0B00BBE7AC /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF73735720B55D0B00BBE7AC /* HomeViewController.m */; };
+		CF73735C20B55D3300BBE7AC /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF73735B20B55D3300BBE7AC /* UserViewController.m */; };
 		CF9A6C07207C9DE3004DD232 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9A6C06207C9DE3004DD232 /* ViewController.swift */; };
 		CF9A6C0B207CA005004DD232 /* BBGestureBackConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9A6C0A207CA005004DD232 /* BBGestureBackConst.swift */; };
 		CFD0E975207A621C00E58465 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFD0E974207A621C00E58465 /* Assets.xcassets */; };
@@ -52,6 +61,23 @@
 		CEDECBDF205CC94100C08340 /* UserViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
 		CEDECBE1205CCA4100C08340 /* BBGestureBaseController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBGestureBaseController.h; sourceTree = "<group>"; };
 		CEDECBE2205CCA4100C08340 /* BBGestureBaseController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBGestureBaseController.m; sourceTree = "<group>"; };
+		CF73731120B5592A00BBE7AC /* BBGestureBack_SysFull_oc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BBGestureBack_SysFull_oc.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF73731C20B5592C00BBE7AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CF73731F20B5592C00BBE7AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CF73732120B5592C00BBE7AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF73732220B5592C00BBE7AC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CF73734520B559D200BBE7AC /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		CF73734720B559D200BBE7AC /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		CF73734A20B559D200BBE7AC /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CF73734B20B559D200BBE7AC /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CF73734F20B55B0D00BBE7AC /* BBNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBNavigationController.h; sourceTree = "<group>"; };
+		CF73735020B55B0D00BBE7AC /* BBNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBNavigationController.m; sourceTree = "<group>"; };
+		CF73735320B55CA400BBE7AC /* BBTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBTabBarController.h; sourceTree = "<group>"; };
+		CF73735420B55CA400BBE7AC /* BBTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBTabBarController.m; sourceTree = "<group>"; };
+		CF73735620B55D0B00BBE7AC /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		CF73735720B55D0B00BBE7AC /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		CF73735A20B55D3300BBE7AC /* UserViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserViewController.h; sourceTree = "<group>"; };
+		CF73735B20B55D3300BBE7AC /* UserViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
 		CF9A6C06207C9DE3004DD232 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CF9A6C0A207CA005004DD232 /* BBGestureBackConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBGestureBackConst.swift; sourceTree = "<group>"; };
 		CFD0E96B207A621C00E58465 /* BBGestureBack_Full_swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BBGestureBack_Full_swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,6 +100,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CF73730E20B5592A00BBE7AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CFD0E968207A621C00E58465 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -89,6 +122,7 @@
 			children = (
 				CEDECB91205CC3CD00C08340 /* BBGestureBack_Full_oc */,
 				CFD0E96C207A621C00E58465 /* BBGestureBack_Full_swift */,
+				CF73731220B5592A00BBE7AC /* BBGestureBack_SysFull_oc */,
 				CEDECB90205CC3CD00C08340 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -98,6 +132,7 @@
 			children = (
 				CEDECB8F205CC3CD00C08340 /* BBGestureBack_Full_oc.app */,
 				CFD0E96B207A621C00E58465 /* BBGestureBack_Full_swift.app */,
+				CF73731120B5592A00BBE7AC /* BBGestureBack_SysFull_oc.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -197,6 +232,93 @@
 			children = (
 				CEDECBDE205CC94100C08340 /* UserViewController.h */,
 				CEDECBDF205CC94100C08340 /* UserViewController.m */,
+			);
+			path = Index;
+			sourceTree = "<group>";
+		};
+		CF73731220B5592A00BBE7AC /* BBGestureBack_SysFull_oc */ = {
+			isa = PBXGroup;
+			children = (
+				CF73734320B559D200BBE7AC /* Classes */,
+				CF73731C20B5592C00BBE7AC /* Assets.xcassets */,
+				CF73731E20B5592C00BBE7AC /* LaunchScreen.storyboard */,
+				CF73732120B5592C00BBE7AC /* Info.plist */,
+				CF73732220B5592C00BBE7AC /* main.m */,
+			);
+			path = BBGestureBack_SysFull_oc;
+			sourceTree = "<group>";
+		};
+		CF73734320B559D200BBE7AC /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				CF73734420B559D200BBE7AC /* Home */,
+				CF73734820B559D200BBE7AC /* User */,
+				CF73734920B559D200BBE7AC /* Main */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		CF73734420B559D200BBE7AC /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				CF73734620B559D200BBE7AC /* Index */,
+				CF73734720B559D200BBE7AC /* ViewController.h */,
+				CF73734520B559D200BBE7AC /* ViewController.m */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		CF73734620B559D200BBE7AC /* Index */ = {
+			isa = PBXGroup;
+			children = (
+				CF73735620B55D0B00BBE7AC /* HomeViewController.h */,
+				CF73735720B55D0B00BBE7AC /* HomeViewController.m */,
+			);
+			path = Index;
+			sourceTree = "<group>";
+		};
+		CF73734820B559D200BBE7AC /* User */ = {
+			isa = PBXGroup;
+			children = (
+				CF73735920B55D1F00BBE7AC /* Index */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		CF73734920B559D200BBE7AC /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				CF73735220B55C7200BBE7AC /* BBTabBar */,
+				CF73734E20B55A9B00BBE7AC /* BBNavigation */,
+				CF73734A20B559D200BBE7AC /* AppDelegate.h */,
+				CF73734B20B559D200BBE7AC /* AppDelegate.m */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		CF73734E20B55A9B00BBE7AC /* BBNavigation */ = {
+			isa = PBXGroup;
+			children = (
+				CF73734F20B55B0D00BBE7AC /* BBNavigationController.h */,
+				CF73735020B55B0D00BBE7AC /* BBNavigationController.m */,
+			);
+			path = BBNavigation;
+			sourceTree = "<group>";
+		};
+		CF73735220B55C7200BBE7AC /* BBTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				CF73735320B55CA400BBE7AC /* BBTabBarController.h */,
+				CF73735420B55CA400BBE7AC /* BBTabBarController.m */,
+			);
+			path = BBTabBar;
+			sourceTree = "<group>";
+		};
+		CF73735920B55D1F00BBE7AC /* Index */ = {
+			isa = PBXGroup;
+			children = (
+				CF73735A20B55D3300BBE7AC /* UserViewController.h */,
+				CF73735B20B55D3300BBE7AC /* UserViewController.m */,
 			);
 			path = Index;
 			sourceTree = "<group>";
@@ -311,6 +433,23 @@
 			productReference = CEDECB8F205CC3CD00C08340 /* BBGestureBack_Full_oc.app */;
 			productType = "com.apple.product-type.application";
 		};
+		CF73731020B5592A00BBE7AC /* BBGestureBack_SysFull_oc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF73734020B5592C00BBE7AC /* Build configuration list for PBXNativeTarget "BBGestureBack_SysFull_oc" */;
+			buildPhases = (
+				CF73730D20B5592A00BBE7AC /* Sources */,
+				CF73730E20B5592A00BBE7AC /* Frameworks */,
+				CF73730F20B5592A00BBE7AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BBGestureBack_SysFull_oc;
+			productName = BBGestureBack_SysFull_oc;
+			productReference = CF73731120B5592A00BBE7AC /* BBGestureBack_SysFull_oc.app */;
+			productType = "com.apple.product-type.application";
+		};
 		CFD0E96A207A621C00E58465 /* BBGestureBack_Full_swift */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CFD0E996207A621D00E58465 /* Build configuration list for PBXNativeTarget "BBGestureBack_Full_swift" */;
@@ -342,6 +481,10 @@
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
+					CF73731020B5592A00BBE7AC = {
+						CreatedOnToolsVersion = 9.3;
+						ProvisioningStyle = Automatic;
+					};
 					CFD0E96A207A621C00E58465 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
@@ -363,6 +506,7 @@
 			targets = (
 				CEDECB8E205CC3CD00C08340 /* BBGestureBack_Full_oc */,
 				CFD0E96A207A621C00E58465 /* BBGestureBack_Full_swift */,
+				CF73731020B5592A00BBE7AC /* BBGestureBack_SysFull_oc */,
 			);
 		};
 /* End PBXProject section */
@@ -374,6 +518,15 @@
 			files = (
 				CEDECB9F205CC3CD00C08340 /* LaunchScreen.storyboard in Resources */,
 				CEDECB9C205CC3CD00C08340 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF73730F20B5592A00BBE7AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF73732020B5592C00BBE7AC /* LaunchScreen.storyboard in Resources */,
+				CF73731D20B5592C00BBE7AC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +558,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CF73730D20B5592A00BBE7AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF73735C20B55D3300BBE7AC /* UserViewController.m in Sources */,
+				CF73734C20B559D200BBE7AC /* ViewController.m in Sources */,
+				CF73732320B5592C00BBE7AC /* main.m in Sources */,
+				CF73734D20B559D200BBE7AC /* AppDelegate.m in Sources */,
+				CF73735120B55B0D00BBE7AC /* BBNavigationController.m in Sources */,
+				CF73735520B55CA400BBE7AC /* BBTabBarController.m in Sources */,
+				CF73735820B55D0B00BBE7AC /* HomeViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CFD0E967207A621C00E58465 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -427,6 +594,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				CEDECB9E205CC3CD00C08340 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		CF73731E20B5592C00BBE7AC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CF73731F20B5592C00BBE7AC /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -574,6 +749,42 @@
 			};
 			name = Release;
 		};
+		CF73733A20B5592C00BBE7AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = BBGestureBack_SysFull_oc/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Bonway.com.gestureBack;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CF73733B20B5592C00BBE7AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = BBGestureBack_SysFull_oc/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Bonway.com.gestureBack;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		CFD0E990207A621D00E58465 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -624,6 +835,15 @@
 			buildConfigurations = (
 				CEDECBBC205CC3CD00C08340 /* Debug */,
 				CEDECBBD205CC3CD00C08340 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF73734020B5592C00BBE7AC /* Build configuration list for PBXNativeTarget "BBGestureBack_SysFull_oc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF73733A20B5592C00BBE7AC /* Debug */,
+				CF73733B20B5592C00BBE7AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
