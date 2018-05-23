@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,34 +15,45 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="G32-96-W3S"/>
-                        <viewControllerLayoutGuide type="bottom" id="v3s-MT-Qtx"/>
+                        <viewControllerLayoutGuide type="top" id="wJ6-tn-oZ6"/>
+                        <viewControllerLayoutGuide type="bottom" id="brw-ND-DR7"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="gps-Ne-MyT">
-                                <rect key="frame" x="67" y="213" width="240" height="240"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="7fk-3g-lDI">
+                                <rect key="frame" x="67" y="213.5" width="240" height="240"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="RdD-vc-C3h"/>
-                                    <constraint firstAttribute="height" constant="240" id="h5k-YB-79l"/>
+                                    <constraint firstAttribute="height" constant="240" id="lbg-7s-TM8"/>
+                                    <constraint firstAttribute="width" constant="240" id="opV-cn-Xl0"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="您可以为我点个赞吗？" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LMs-9Q-pEN">
+                                <rect key="frame" x="16" y="473.5" width="343" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="IiF-NU-D1J"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="gps-Ne-MyT" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="0e4-D5-rOt"/>
-                            <constraint firstItem="gps-Ne-MyT" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="zJQ-uT-VsC"/>
+                            <constraint firstItem="LMs-9Q-pEN" firstAttribute="top" secondItem="7fk-3g-lDI" secondAttribute="bottom" constant="20" id="4pq-RP-mNf"/>
+                            <constraint firstItem="LMs-9Q-pEN" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" id="CPs-4w-sCY"/>
+                            <constraint firstItem="7fk-3g-lDI" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="JdY-mR-UbN"/>
+                            <constraint firstItem="7fk-3g-lDI" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="etK-3r-Gum"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LMs-9Q-pEN" secondAttribute="trailing" id="nVr-AX-uZf"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="33.125" y="416.87499999999994"/>
+            <point key="canvasLocation" x="32.5" y="416.5"/>
         </scene>
     </scenes>
     <resources>
-        <image name="logo" width="90" height="90"/>
+        <image name="logo" width="200" height="200"/>
     </resources>
 </document>
