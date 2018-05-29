@@ -6,23 +6,44 @@
 	<dict>
 		<key>BBGestureBack_Full_oc.xcscheme</key>
 		<dict>
+			<key>isShown</key>
+			<false/>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
 		<key>BBGestureBack_Full_swift.xcscheme</key>
 		<dict>
+			<key>isShown</key>
+			<false/>
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
 		<key>BBGestureBack_SysFull_oc.xcscheme</key>
 		<dict>
+			<key>isShown</key>
+			<false/>
 			<key>orderHint</key>
 			<integer>2</integer>
+		</dict>
+		<key>BBGestureBack_SysFull_swift.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>CEDECB8E205CC3CD00C08340</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CF73731020B5592A00BBE7AC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CFD0E96A207A621C00E58465</key>
 		<dict>
 			<key>primary</key>
 			<true/>
