@@ -4,28 +4,28 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>BBGestureBack_Full_oc.xcscheme</key>
+		<key>BBGestureBack_Full_oc.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>isShown</key>
 			<true/>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
-		<key>BBGestureBack_Full_swift.xcscheme</key>
+		<key>BBGestureBack_Full_swift.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>isShown</key>
 			<true/>
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
-		<key>BBGestureBack_SysFull_oc.xcscheme</key>
+		<key>BBGestureBack_SysFull_oc.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>isShown</key>
-			<false/>
+			<true/>
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
-		<key>BBGestureBack_SysFull_swift.xcscheme</key>
+		<key>BBGestureBack_SysFull_swift.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>3</integer>
@@ -34,11 +34,6 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>CEDECB8E205CC3CD00C08340</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>CF395E0920BD496B00434CC7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
