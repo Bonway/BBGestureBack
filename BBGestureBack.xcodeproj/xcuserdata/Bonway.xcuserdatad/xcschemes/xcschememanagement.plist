@@ -4,28 +4,28 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>BBGestureBack_Full_oc.xcscheme_^#shared#^_</key>
+		<key>BBGestureBack_Full_oc.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<true/>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
-		<key>BBGestureBack_Full_swift.xcscheme_^#shared#^_</key>
+		<key>BBGestureBack_Full_swift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<true/>
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
-		<key>BBGestureBack_SysFull_oc.xcscheme_^#shared#^_</key>
+		<key>BBGestureBack_SysFull_oc.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<true/>
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
-		<key>BBGestureBack_SysFull_swift.xcscheme_^#shared#^_</key>
+		<key>BBGestureBack_SysFull_swift.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>3</integer>
