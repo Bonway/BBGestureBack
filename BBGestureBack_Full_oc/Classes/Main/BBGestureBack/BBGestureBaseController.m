@@ -133,6 +133,8 @@ static char bbListenTabbarViewMove[] = "bbListenTabbarViewMove";
     }
 }
 
+
+
 - (void)screenShot{
     AppDelegate *appDelegate = (AppDelegate*)[UIApplication sharedApplication].delegate;
     UIGraphicsBeginImageContextWithOptions(CGSizeMake([UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height), YES, 0);

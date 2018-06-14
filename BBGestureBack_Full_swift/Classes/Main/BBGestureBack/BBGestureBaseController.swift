@@ -66,6 +66,8 @@ class BBGestureBaseController: UIViewController {
         
     }
     
+    
+    
     func bb_popViewController() {
         
         self.bb_basePopViewController(viewController: nil, popType: BBPopType.viewController)
@@ -92,7 +94,7 @@ class BBGestureBaseView: UIView {
     var imgView : UIImageView?
     var maskedView : UIView?
     var arrayImage : NSMutableArray?
-    private var bbListenTabbarViewMove = "bbListenTabbarViewMove"
+    static var bbListenTabbarViewMove = Array("bbListenTabbarViewMove");
     
     override init(frame:CGRect){
         super.init(frame: frame)
@@ -104,7 +106,7 @@ class BBGestureBaseView: UIView {
         self.addSubview(imgView!)
         self.addSubview(maskedView!)
         
-        (UIApplication.shared.delegate as! AppDelegate).window?.rootViewController?.view.addObserver(self, forKeyPath: "transform", options: NSKeyValueObservingOptions.new, context: &bbListenTabbarViewMove)
+        (UIApplication.shared.delegate as! AppDelegate).window?.rootViewController?.view.addObserver(self, forKeyPath: "transform", options: NSKeyValueObservingOptions.new, context: &BBGestureBaseView.bbListenTabbarViewMove)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -112,7 +114,7 @@ class BBGestureBaseView: UIView {
     }
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-        if (context == &bbListenTabbarViewMove) {
+        if (context == &BBGestureBaseView.bbListenTabbarViewMove) {
             let value = change?[NSKeyValueChangeKey.newKey] as! NSValue
             let newTransform = value.cgAffineTransformValue
             showEffectChange(pt: CGPoint(x: newTransform.tx, y: 0))
@@ -147,5 +149,11 @@ class BBGestureBaseView: UIView {
         let sendImage = UIImage.init(cgImage: imageRef!)
         imgView?.image = sendImage
         imgView?.transform = CGAffineTransform(scaleX: BBWindowToScale, y: BBWindowToScale)
+    }
+    
+    
+    deinit {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.window?.rootViewController?.view .removeObserver(self, forKeyPath: "transform", context: &BBGestureBaseView.bbListenTabbarViewMove)
     }
 }

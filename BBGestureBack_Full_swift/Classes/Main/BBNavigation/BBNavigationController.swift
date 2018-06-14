@@ -102,8 +102,6 @@ class BBNavigationController: UINavigationController,UIGestureRecognizerDelegate
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         UIGraphicsBeginImageContextWithOptions(CGSize(width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height), true, 0);
         appDelegate.window?.layer.render(in: UIGraphicsGetCurrentContext()!)
-        UIGraphicsBeginImageContextWithOptions(CGSize(width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height), true, 0);
-        appDelegate.window?.layer.render(in: UIGraphicsGetCurrentContext()!)
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         arrayScreenshot.add(image!)
