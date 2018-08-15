@@ -48,16 +48,17 @@ BBGestureBack不仅支持OC还支持Swift，最低适配iOS7.0，iOS主流的全
  `@property (nonatomic) Boolean isEnablePanGesture;//default is YES.`
  
  * pop的返回方式
+ 
 ```
  - (void)bb_popViewController;
  - (void)bb_popToViewController:(UIViewController*)viewController;
  - (void)bb_popToRootViewController;
 ```
-* 参数
 
-```
+
 * 参数 oc
 ![oc参数说明及文件目录](https://img-blog.csdn.net/20180815165145281?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0JvbndheV9IdWFuZw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+
 ```
 UIKIT_EXTERN const Boolean BBIsCanleSystemPan;//是否屏蔽系统返回手势
 UIKIT_EXTERN const CGFloat BBDistanceToLeft;//距离左边响应的范围
@@ -67,8 +68,10 @@ UIKIT_EXTERN const CGFloat BBGestureSpeed;//返回的速度
 UIKIT_EXTERN const CGFloat BBDistanceToPan;//手势拖拽的长度
 UIKIT_EXTERN const CGFloat BBDistanceToStart;//默认为0，0为全屏返回，也可指定距离
 ```
+
 * 参数 swift
 ![swift参数说明及文件目录](https://img-blog.csdn.net/20180815165243642?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0JvbndheV9IdWFuZw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+
 ```
 let BBIsCanleSystemPan:Bool = true//是否屏蔽系统返回手势
 let BBDistanceToLeft:CGFloat! = 70.0//距离左边响应的范围
