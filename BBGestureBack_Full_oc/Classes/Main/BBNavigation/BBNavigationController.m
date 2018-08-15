@@ -26,13 +26,13 @@
 - (void)viewDidLoad{
     [super viewDidLoad];
     //屏蔽系统的手势
-    self.interactivePopGestureRecognizer.enabled = NO;
+    self.interactivePopGestureRecognizer.enabled = !BBIsCanleSystemPan;
     self.panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePanGesture:)];
     _panGesture.delegate = self;
     [self.view addGestureRecognizer:_panGesture];
 }
 - (BOOL)gestureRecognizerShouldBegin:(UIPanGestureRecognizer *)gestureRecognizer {
-    if (gestureRecognizer.view == self.view) {
+    if (gestureRecognizer.view == self.view && [gestureRecognizer locationInView:self.view].x < (BBDistanceToSatar == 0 ? UIScreen.mainScreen.bounds.size.width : BBDistanceToSatar)) {
         BBGestureBaseController *topView = (BBGestureBaseController *)self.topViewController;
         if (!topView.isEnablePanGesture)
             return NO;

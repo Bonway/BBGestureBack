@@ -15,6 +15,9 @@ class BBNavigationController: UINavigationController,UIGestureRecognizerDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.interactivePopGestureRecognizer?.isEnabled = !BBIsCanleSystemPan
+        
         arrayScreenshot = NSMutableArray.init()
         panGesture = UIPanGestureRecognizer(target: self, action: #selector(handlePanGesture(_:)))
         view.addGestureRecognizer(panGesture!)
@@ -25,15 +28,17 @@ class BBNavigationController: UINavigationController,UIGestureRecognizerDelegate
         super.didReceiveMemoryWarning()
     }
     
-    private func gestureRecognizerShouldBegin(_ gestureRecognizer: UIPanGestureRecognizer) -> Bool {
-        if (gestureRecognizer.view == self.view) {
+    func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+        
+        if (gestureRecognizer.view == self.view && gestureRecognizer.location(in: view).x < (BBDistanceToStart == 0 ? UIScreen.main.bounds.width : BBDistanceToStart)) {
             let topView = topViewController as! BBGestureBaseController
             if (!topView.isEnablePanGesture) {
                 return false;
             } else {
-                
-                let translate = gestureRecognizer.translation(in :view)
+                let gesture = gestureRecognizer as! UIPanGestureRecognizer
+                let translate = gesture.translation(in :view)
                 let possible = translate.x != 0 && fabs(translate.y) == 0;
+                
                 if (possible){
                     return true
                 }else {

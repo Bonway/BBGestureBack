@@ -17,9 +17,17 @@ func BBColor(rgbValue: UInt) -> UIColor {
     )
 }
 
-var BBDistanceToLeft:CGFloat! = 70.0
-var BBWindowToScale:CGFloat! = 0.95
-var BBMaskingAlpha:CGFloat! = 0.9
-var BBGestureSpeed:TimeInterval! = 0.3
-var BBDistanceToPan:CGFloat! = 10
-
+// Screen system to return gesture.（是否屏蔽系统返回手势）
+let BBIsCanleSystemPan:Bool = true
+// The distance from the left can be automatically returned.(距离左边多少距离，可以自动返回)
+let BBDistanceToLeft:CGFloat! = 70.0
+// BottomView Scaling.(底层缩放比例)
+let BBWindowToScale:CGFloat! = 0.95
+// BottomView alpha.(底层透明度)
+let BBMaskingAlpha:CGFloat! = 0.9
+// Automatic return speed.(自动返回速度)
+let BBGestureSpeed:TimeInterval! = 0.3
+// Range of drag and drop.(拖拽的范围,大于此值才有效果)
+let BBDistanceToPan:CGFloat! = 10
+// The default is 0, 0 for full screen return, and also for distance.（默认为0，0为全屏返回，也可指定距离）
+let BBDistanceToStart:CGFloat! = 100
