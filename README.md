@@ -57,7 +57,7 @@ BBGestureBack不仅支持OC还支持Swift，最低适配iOS7.0，iOS主流的全
 
 
 * 参数 oc
-![oc参数说明及文件目录](https://img-blog.csdn.net/20180815165145281?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0JvbndheV9IdWFuZw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+![oc参数说明及文件目录](https://upload-images.jianshu.io/upload_images/10991770-ab0eea71e46a62df.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ```
 UIKIT_EXTERN const Boolean BBIsCanleSystemPan;//是否屏蔽系统返回手势
@@ -68,10 +68,8 @@ UIKIT_EXTERN const CGFloat BBGestureSpeed;//返回的速度
 UIKIT_EXTERN const CGFloat BBDistanceToPan;//手势拖拽的长度
 UIKIT_EXTERN const CGFloat BBDistanceToStart;//默认为0，0为全屏返回，也可指定距离
 ```
-
 * 参数 swift
-![swift参数说明及文件目录](https://img-blog.csdn.net/20180815165243642?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0JvbndheV9IdWFuZw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
-
+![swift参数说明及文件目录](https://upload-images.jianshu.io/upload_images/10991770-b63eb35b54bc62fd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 ```
 let BBIsCanleSystemPan:Bool = true//是否屏蔽系统返回手势
 let BBDistanceToLeft:CGFloat! = 70.0//距离左边响应的范围
@@ -81,8 +79,9 @@ let BBGestureSpeed:TimeInterval! = 0.3//返回的速度
 let BBDistanceToPan:CGFloat! = 10//手势拖拽的长度
 let BBDistanceToStart:CGFloat! = 100//默认为0，0为全屏返回，也可指定距离
 ```
+
 上传图片说明：
-![参数说明.png](https://upload-images.jianshu.io/upload_images/10991770-1043942d2a253495.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![BBGestureBack参数说明](https://upload-images.jianshu.io/upload_images/10991770-190ae7dbcf35d5e7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ####  BBGestureBack 系统全屏效果 ####
 ![系统全屏返回.gif](https://upload-images.jianshu.io/upload_images/10991770-40fc8f74b89dff82.gif?imageMogr2/auto-orient/strip)
