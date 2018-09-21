@@ -78,8 +78,8 @@ class BBNavigationController: UINavigationController,UIGestureRecognizerDelegate
             let point_inView = panGesture.translation(in: view)
             if (point_inView.x >= BBDistanceToLeft) {
                 UIView.animate(withDuration: 0.3, animations: {
-                    rootVC?.view.transform = CGAffineTransform(translationX: 320, y: 0)
-                    presentedVC?.view.transform = CGAffineTransform(translationX: 320, y: 0)
+                    rootVC?.view.transform = CGAffineTransform(translationX: UIScreen.main.bounds.size.width, y: 0)
+                    presentedVC?.view.transform = CGAffineTransform(translationX: UIScreen.main.bounds.size.width, y: 0)
                 }, completion: { (true) in
                     self.popViewController(animated: false)
                     rootVC?.view.transform = CGAffineTransform.identity

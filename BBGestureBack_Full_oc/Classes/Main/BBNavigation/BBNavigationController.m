@@ -32,7 +32,7 @@
     [self.view addGestureRecognizer:_panGesture];
 }
 - (BOOL)gestureRecognizerShouldBegin:(UIPanGestureRecognizer *)gestureRecognizer {
-    if (gestureRecognizer.view == self.view && [gestureRecognizer locationInView:self.view].x < (BBDistanceToSatar == 0 ? UIScreen.mainScreen.bounds.size.width : BBDistanceToSatar)) {
+    if (gestureRecognizer.view == self.view && [gestureRecognizer locationInView:self.view].x < (BBDistanceToStart == 0 ? UIScreen.mainScreen.bounds.size.width : BBDistanceToSatar)) {
         BBGestureBaseController *topView = (BBGestureBaseController *)self.topViewController;
         if (!topView.isEnablePanGesture)
             return NO;

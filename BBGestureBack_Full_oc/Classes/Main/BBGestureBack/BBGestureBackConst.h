@@ -39,4 +39,4 @@ UIKIT_EXTERN const CGFloat BBGestureSpeed;
 // Range of drag and drop.(拖拽的范围,大于此值才有效果)
 UIKIT_EXTERN const CGFloat BBDistanceToPan;
 // The default is 0, 0 for full screen return, and also for distance.（默认为0，0为全屏返回，也可指定距离）
-UIKIT_EXTERN const CGFloat BBDistanceToSatar;
+UIKIT_EXTERN const CGFloat BBDistanceToStart;
