@@ -12,6 +12,11 @@ class HomeViewController: BBGestureBaseController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        //iOS12.1 UINavigationController + UITabBarController（ UITabBar 磨砂），在 系统的 popViewControllerAnimated 会遇到tabbar布局错乱的问题，所以需添加以下方法。
+        //当然你也可以自己选择添加到底层的navigationController中，进行处理。
+        UITabBar.appearance().isTranslucent = false
+        //---------------------------------------
+        
         let btn = UIButton()
         btn.frame = CGRect(x: 100, y: 100, width: 100, height: 100)
         
