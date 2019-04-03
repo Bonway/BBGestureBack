@@ -8,11 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+NSString *const kBBFirstLaunch = @"BBFirstLaunch";
 
-const Boolean BBIsCanleSystemPan = YES;
-const CGFloat BBDistanceToLeft = 70.0;
-const CGFloat BBWindowToScale = 0.95;
-const CGFloat BBMaskingAlpha = 0.9;
-const CGFloat BBGestureSpeed = 0.3;
-const CGFloat BBDistanceToPan = 10;
-const CGFloat BBDistanceToStart = 0;
+const Boolean kBBIsOpenIphoneXStyle = YES;
+const CGFloat kBBIphoneXStyleCorner = 40.0;
+const NSInteger kBBUserGuiderImgCount = 3;
+const Boolean kBBIsCanleSystemPan = YES;
+const CGFloat kBBDistanceToLeft = 70.0;
+const CGFloat kBBWindowToScale = 0.95;
+const CGFloat kBBMaskingAlpha = 0.9;
+const CGFloat kBBGestureSpeed = 0.3;
+const CGFloat kBBDistanceToPan = 10.0;
+const CGFloat kBBDistanceToStart = 0.0;

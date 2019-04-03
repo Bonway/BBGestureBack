@@ -16,7 +16,7 @@ class BBNavigationController: UINavigationController,UIGestureRecognizerDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.interactivePopGestureRecognizer?.isEnabled = !BBIsCanleSystemPan
+        self.interactivePopGestureRecognizer?.isEnabled = !kBBIsCanleSystemPan
         
         arrayScreenshot = NSMutableArray.init()
         panGesture = UIPanGestureRecognizer(target: self, action: #selector(handlePanGesture(_:)))
@@ -30,7 +30,7 @@ class BBNavigationController: UINavigationController,UIGestureRecognizerDelegate
     
     func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
         
-        if (gestureRecognizer.view == self.view && gestureRecognizer.location(in: view).x < (BBDistanceToStart == 0 ? UIScreen.main.bounds.width : BBDistanceToStart)) {
+        if (gestureRecognizer.view == self.view && gestureRecognizer.location(in: view).x < (kBBDistanceToStart == 0 ? UIScreen.main.bounds.width : kBBDistanceToStart)) {
             let topView = topViewController as! BBGestureBaseController
             if (!topView.isEnablePanGesture) {
                 return false;
@@ -60,10 +60,21 @@ class BBNavigationController: UINavigationController,UIGestureRecognizerDelegate
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let rootVC = appDelegate.window?.rootViewController
         let presentedVC = rootVC?.presentedViewController
+        
+        
+        
         if (self.viewControllers.count == 1) {
             return
         }
         if (panGesture.state == UIGestureRecognizerState.began) {
+            
+            if (bb_IsIphone && kBBIsOpenIphoneXStyle) {
+                rootVC?.view.layer.masksToBounds = true;
+                rootVC?.view.layer.cornerRadius = kBBIphoneXStyleCorner;
+                presentedVC?.view.layer.masksToBounds = true;
+                presentedVC?.view.layer.cornerRadius = kBBIphoneXStyleCorner;
+            }
+            
             appDelegate.gestureBaseView?.isHidden = false;
         }
         else if (panGesture.state == UIGestureRecognizerState.changed) {
@@ -76,7 +87,7 @@ class BBNavigationController: UINavigationController,UIGestureRecognizerDelegate
         else if (panGesture.state == UIGestureRecognizerState.ended) {
             
             let point_inView = panGesture.translation(in: view)
-            if (point_inView.x >= BBDistanceToLeft) {
+            if (point_inView.x >= kBBDistanceToLeft) {
                 UIView.animate(withDuration: 0.3, animations: {
                     rootVC?.view.transform = CGAffineTransform(translationX: UIScreen.main.bounds.size.width, y: 0)
                     presentedVC?.view.transform = CGAffineTransform(translationX: UIScreen.main.bounds.size.width, y: 0)
@@ -91,6 +102,13 @@ class BBNavigationController: UINavigationController,UIGestureRecognizerDelegate
                     rootVC?.view.transform = CGAffineTransform.identity
                     presentedVC?.view.transform = CGAffineTransform.identity
                 }, completion: { (true) in
+                    
+                    if (bb_IsIphone && kBBIsOpenIphoneXStyle) {
+                        rootVC?.view.layer.masksToBounds = false;
+                        rootVC?.view.layer.cornerRadius = 0;
+                        presentedVC?.view.layer.masksToBounds = false;
+                        presentedVC?.view.layer.cornerRadius = 0;
+                    }
                     appDelegate.gestureBaseView?.isHidden = true
                 })
             }

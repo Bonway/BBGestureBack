@@ -1,6 +1,7 @@
 # BBGestureBack
 
 Full screen return gesture（全屏手势返回 滑动返回 pop 动画效果）
+在此感谢大家提的建议！！！
 
 [如果你在天朝，请点击这里，速度会很快哦~](https://blog.csdn.net/Bonway_Huang/article/details/50505975) 
 
@@ -37,6 +38,8 @@ BBGestureBack不仅支持OC还支持Swift，最低适配iOS7.0，iOS主流的全
 
 不仅仅手势返回可以有动画、就连pop也有效果。
 
+![BBGestureBack手势效果](https://upload-images.jianshu.io/upload_images/10991770-d4ed0df184db25ca.gif?imageMogr2/auto-orient/strip)
+
 ![BBGestureBack.gif](https://upload-images.jianshu.io/upload_images/10991770-edecbec93d1d7e8b.gif?imageMogr2/auto-orient/strip)
 
 
@@ -47,6 +50,10 @@ BBGestureBack不仅支持OC还支持Swift，最低适配iOS7.0，iOS主流的全
  
  `@property (nonatomic) Boolean isEnablePanGesture;//default is YES.`
  
+  * 重新设置rootViewController
+  
+ ` setupRootViewController:(UIViewController *)rootViewController`
+ 
  * pop的返回方式
  
 ```
@@ -54,30 +61,61 @@ BBGestureBack不仅支持OC还支持Swift，最低适配iOS7.0，iOS主流的全
  - (void)bb_popToViewController:(UIViewController*)viewController;
  - (void)bb_popToRootViewController;
 ```
+* 更新增引导图，后期还会完善广告图
 
 
 * 参数 oc
 ![oc参数说明及文件目录](https://upload-images.jianshu.io/upload_images/10991770-ab0eea71e46a62df.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ```
-UIKIT_EXTERN const Boolean BBIsCanleSystemPan;//是否屏蔽系统返回手势
-UIKIT_EXTERN const CGFloat BBDistanceToLeft;//距离左边响应的范围
-UIKIT_EXTERN const CGFloat BBWindowToScale;//缩放大小(淘宝、京东没有缩放...)
-UIKIT_EXTERN const CGFloat BBMaskingAlpha;//背景透明度
-UIKIT_EXTERN const CGFloat BBGestureSpeed;//返回的速度
-UIKIT_EXTERN const CGFloat BBDistanceToPan;//手势拖拽的长度
-UIKIT_EXTERN const CGFloat BBDistanceToStart;//默认为0，0为全屏返回，也可指定距离
+//The ifrst user guider image (第一次引导图)
+UIKIT_EXTERN NSString *const kBBFirstLaunch;
+// Open iPhone X Style.（是否打开Phone X风格）
+UIKIT_EXTERN const Boolean kBBIsOpenIphoneXStyle;
+// The default is 40， iPhone X Style Corner。（默认为40，iPhone X 圆角弧度）
+UIKIT_EXTERN const CGFloat kBBIphoneXStyleCorner;
+// The default is 3， User guider image count。（默认为3，用户引导图总页数）
+UIKIT_EXTERN const NSInteger kBBUserGuiderImgCount;
+// Screen system to return gesture.（是否屏蔽系统返回手势）
+UIKIT_EXTERN const Boolean kBBIsCanleSystemPan;
+// The distance from the left can be automatically returned.(距离左边多少距离，可以自动返回)
+UIKIT_EXTERN const CGFloat kBBDistanceToLeft;
+// BottomView Scaling.(底层缩放比例)
+UIKIT_EXTERN const CGFloat kBBWindowToScale;
+// BottomView alpha.(底层透明度)
+UIKIT_EXTERN const CGFloat kBBMaskingAlpha;
+// Automatic return speed.(自动返回速度)
+UIKIT_EXTERN const CGFloat kBBGestureSpeed;
+// Range of drag and drop.(拖拽的范围,大于此值才有效果)
+UIKIT_EXTERN const CGFloat kBBDistanceToPan;
+// The default is 0, 0 for full screen return, and also for distance.（默认为0，0为全屏返回，也可指定距离）
+UIKIT_EXTERN const CGFloat kBBDistanceToStart;
 ```
 * 参数 swift
 ![swift参数说明及文件目录](https://upload-images.jianshu.io/upload_images/10991770-b63eb35b54bc62fd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 ```
-let BBIsCanleSystemPan:Bool = true//是否屏蔽系统返回手势
-let BBDistanceToLeft:CGFloat! = 70.0//距离左边响应的范围
-let BBWindowToScale:CGFloat! = 0.95//缩放大小(淘宝、京东没有缩放...)
-let BBMaskingAlpha:CGFloat! = 0.9//背景透明度
-let BBGestureSpeed:TimeInterval! = 0.3//返回的速度
-let BBDistanceToPan:CGFloat! = 10//手势拖拽的长度
-let BBDistanceToStart:CGFloat! = 100//默认为0，0为全屏返回，也可指定距离
+//The ifrst user guider image (第一次引导图)
+let kBBFirstLaunch:String = "BBFirstLaunch"
+// Open iPhone X Style.（是否打开Phone X风格）
+let kBBIsOpenIphoneXStyle:Bool = true
+// The default is 40， iPhone X Style Corner。（默认为40，iPhone X 圆角弧度）
+let kBBIphoneXStyleCorner:CGFloat! = 40
+// The default is 3， User guider image count。（默认为3，用户引导图总页数）
+let kBBUserGuiderImgCount:Int = 3
+// Screen system to return gesture.（是否屏蔽系统返回手势）
+let kBBIsCanleSystemPan:Bool = true
+// The distance from the left can be automatically returned.(距离左边多少距离，可以自动返回)
+let kBBDistanceToLeft:CGFloat! = 70.0
+// BottomView Scaling.(底层缩放比例)
+let kBBWindowToScale:CGFloat! = 0.95
+// BottomView alpha.(底层透明度)
+let kBBMaskingAlpha:CGFloat! = 0.9
+// Automatic return speed.(自动返回速度)
+let kBBGestureSpeed:TimeInterval! = 0.3
+// Range of drag and drop.(拖拽的范围,大于此值才有效果)
+let kBBDistanceToPan:CGFloat! = 10
+// The default is 0, 0 for full screen return, and also for distance.（默认为0，0为全屏返回，也可指定距离）
+let kBBDistanceToStart:CGFloat! = 100
 ```
 
 上传图片说明：

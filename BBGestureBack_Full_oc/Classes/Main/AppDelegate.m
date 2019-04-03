@@ -7,31 +7,29 @@
 
 
 #import "AppDelegate.h"
-#import "BBTabBarController.h"
 
+#import "BBGestureBack.h"
+#import "BBUserGuiderController.h"
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
 
++ (AppDelegate* )shareAppDelegate {
+    return (AppDelegate*)[UIApplication sharedApplication].delegate;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
-    self.window.rootViewController = [[BBTabBarController alloc] init];;
-    self.gestureBaseView = [[BBGestureBaseView alloc] initWithFrame:CGRectMake(0, 0, self.window.frame.size.width, self.window.frame.size.height)];
-    [self.window insertSubview:self.gestureBaseView atIndex:0];
-    self.gestureBaseView.hidden = YES;
+    
+    [self setupRootController];
     
     [self.window makeKeyAndVisible];
-    
     return YES;
     
-}
-+ (AppDelegate* )shareAppDelegate {
-    return (AppDelegate*)[UIApplication sharedApplication].delegate;
 }
 
 
@@ -61,5 +59,43 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+
+
+- (void)setupRootController {
+    
+    if (![BBUserDefault boolForKey:kBBFirstLaunch]) {
+        [BBUserDefault setBool:YES forKey:kBBFirstLaunch];
+        [self setupRootViewController:[[BBUserGuiderController alloc]init]];
+    }else{
+        [self setupRootViewController:[[BBTabBarController alloc] init]];
+    }
+    
+}
+
+- (void)setupRootViewController:(UIViewController *)rootViewController {
+    
+    rootViewController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    [UIView transitionWithView:self.window duration:0.5f options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
+        BOOL oldState = [UIView areAnimationsEnabled];
+        [UIView setAnimationsEnabled:NO];
+        [UIApplication sharedApplication].keyWindow.rootViewController = rootViewController;
+        [UIView setAnimationsEnabled:oldState];
+    } completion:nil];
+    
+    
+    if (!self.gestureBaseView) {
+        self.window.rootViewController = rootViewController;
+        self.gestureBaseView = [[BBGestureBaseView alloc] initWithFrame:CGRectMake(0, 0, self.window.frame.size.width, self.window.frame.size.height)];
+        [self.window insertSubview:self.gestureBaseView atIndex:0];
+    }else{
+        [self.gestureBaseView removeObserver];
+        self.window.rootViewController = rootViewController;
+        [self.gestureBaseView addObserver];
+        [self.window sendSubviewToBack:self.gestureBaseView];
+    }
+    
+    self.gestureBaseView.hidden = YES;
+    
+}
 
 @end

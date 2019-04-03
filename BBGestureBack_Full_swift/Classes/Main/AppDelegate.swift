@@ -20,12 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.backgroundColor = UIColor.white
         
-        tabBarViewController = BBTabBarController()
-        window?.rootViewController = tabBarViewController
+        setupRootController();
         
-        gestureBaseView = BBGestureBaseView.init(frame: CGRect(x: 0, y: 0, width: (window?.frame.size.width)!, height: (window?.frame.size.height)!))
-        window?.insertSubview(gestureBaseView!, at: 0)
-        gestureBaseView?.isHidden = true;
+        
         window?.makeKeyAndVisible()
         
         return true
@@ -54,5 +51,47 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 
+    private func setupRootController(){
+        
+        
+        if !UserDefaults.standard.bool(forKey: kBBFirstLaunch) {
+            UserDefaults.standard.set(true, forKey: kBBFirstLaunch)
+            setupRootViewController(rootViewController: BBUserGuiderController())
+        }else{
+            setupRootViewController(rootViewController: BBTabBarController())
+        }
+        
+    }
+    
+    public func setupRootViewController(rootViewController:UIViewController) {
+        
+        rootViewController.modalTransitionStyle = .flipHorizontal
+        UIView.transition(with: window!, duration: 0.5, options: .transitionCrossDissolve, animations: {
+            
+            let oldState = UIView.areAnimationsEnabled
+            UIView.setAnimationsEnabled(false)
+            UIApplication.shared.keyWindow?.rootViewController = rootViewController
+            UIView.setAnimationsEnabled(oldState)
+        
+        }, completion: { completed in
+            
+        })
+        
+        if gestureBaseView == nil {
+            window?.rootViewController = rootViewController
+            gestureBaseView = BBGestureBaseView.init(frame: CGRect(x: 0, y: 0, width: (window?.frame.size.width)!, height: (window?.frame.size.height)!))
+            window?.insertSubview(gestureBaseView!, at: 0)
+        }else{
+            gestureBaseView!.removeObserver()
+            window?.rootViewController = rootViewController
+            gestureBaseView!.addObserver()
+            window?.sendSubview(toBack: gestureBaseView!)
+        }
+        
+        gestureBaseView?.isHidden = true;
+        
+    }
+    
+    
 }
 

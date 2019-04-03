@@ -7,8 +7,8 @@
 
 
 #import "BBNavigationController.h"
-#import "BBGestureBaseController.h"
-#import "BBGestureBackConst.h"
+
+#import "BBGestureBack.h"
 #import "AppDelegate.h"
 @interface BBNavigationController ()<UIGestureRecognizerDelegate,UINavigationControllerDelegate>
 @end
@@ -26,13 +26,14 @@
 - (void)viewDidLoad{
     [super viewDidLoad];
     //屏蔽系统的手势
-    self.interactivePopGestureRecognizer.enabled = !BBIsCanleSystemPan;
+    self.interactivePopGestureRecognizer.enabled = !kBBIsCanleSystemPan;
     self.panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePanGesture:)];
     _panGesture.delegate = self;
     [self.view addGestureRecognizer:_panGesture];
 }
+
 - (BOOL)gestureRecognizerShouldBegin:(UIPanGestureRecognizer *)gestureRecognizer {
-    if (gestureRecognizer.view == self.view && [gestureRecognizer locationInView:self.view].x < (BBDistanceToStart == 0 ? UIScreen.mainScreen.bounds.size.width : BBDistanceToStart)) {
+    if (gestureRecognizer.view == self.view && [gestureRecognizer locationInView:self.view].x < (kBBDistanceToStart == 0 ? UIScreen.mainScreen.bounds.size.width : kBBDistanceToStart)) {
         BBGestureBaseController *topView = (BBGestureBaseController *)self.topViewController;
         if (!topView.isEnablePanGesture)
             return NO;
@@ -72,19 +73,25 @@
         return;
     }
     if (panGesture.state == UIGestureRecognizerStateBegan) {
+        if (BBIS_IPHONEX && kBBIsOpenIphoneXStyle) {
+            rootVC.view.layer.masksToBounds = YES;
+            rootVC.view.layer.cornerRadius = kBBIphoneXStyleCorner;
+            presentedVC.view.layer.masksToBounds = YES;
+            presentedVC.view.layer.cornerRadius = kBBIphoneXStyleCorner;
+        }
         appDelegate.gestureBaseView.hidden = NO;
     }
     else if (panGesture.state == UIGestureRecognizerStateChanged) {
         CGPoint point_inView = [panGesture translationInView:self.view];
-        if (point_inView.x >= BBDistanceToPan) {
-            rootVC.view.transform = CGAffineTransformMakeTranslation(point_inView.x - BBDistanceToPan, 0);
-            presentedVC.view.transform = CGAffineTransformMakeTranslation(point_inView.x - BBDistanceToPan, 0);
+        if (point_inView.x >= kBBDistanceToPan) {
+            rootVC.view.transform = CGAffineTransformMakeTranslation(point_inView.x - kBBDistanceToPan, 0);
+            presentedVC.view.transform = CGAffineTransformMakeTranslation(point_inView.x - kBBDistanceToPan, 0);
         }
     }
     else if (panGesture.state == UIGestureRecognizerStateEnded) {
         CGPoint point_inView = [panGesture translationInView:self.view];
-        if (point_inView.x >= BBDistanceToLeft) {
-            [UIView animateWithDuration:BBGestureSpeed animations:^{
+        if (point_inView.x >= kBBDistanceToLeft) {
+            [UIView animateWithDuration:kBBGestureSpeed animations:^{
                 rootVC.view.transform = CGAffineTransformMakeTranslation(([UIScreen mainScreen].bounds.size.width), 0);
                 presentedVC.view.transform = CGAffineTransformMakeTranslation(([UIScreen mainScreen].bounds.size.width), 0);
             } completion:^(BOOL finished) {
@@ -95,10 +102,16 @@
             }];
         }
         else {
-            [UIView animateWithDuration:BBGestureSpeed animations:^{
+            [UIView animateWithDuration:kBBGestureSpeed animations:^{
                 rootVC.view.transform = CGAffineTransformIdentity;
                 presentedVC.view.transform = CGAffineTransformIdentity;
             } completion:^(BOOL finished) {
+                if (BBIS_IPHONEX && kBBIsOpenIphoneXStyle) {
+                    rootVC.view.layer.masksToBounds = NO;
+                    rootVC.view.layer.cornerRadius = 0;
+                    presentedVC.view.layer.masksToBounds = NO;
+                    presentedVC.view.layer.cornerRadius = 0;
+                }
                 appDelegate.gestureBaseView.hidden = YES;
             }];
         }
@@ -149,6 +162,7 @@
     if (image)
         appdelegate.gestureBaseView.imgView.image = image;
     UIViewController *viewController = [super popViewControllerAnimated:animated];
+    
     return viewController;
 }
 - (NSArray *)popToRootViewControllerAnimated:(BOOL)animated {

@@ -7,8 +7,14 @@
 
 
 #import <UIKit/UIKit.h>
+typedef enum _BBPopType {
+    BBPopTypeViewController  = 0,
+    BBPopTypeToViewController,
+    BBPopTypeToRootViewController
+} BBPopType;
 
 @interface BBGestureBaseController : UIViewController
+@property (nonatomic) BBPopType blankType;// default is BBPopTypeViewController.
 @property (nonatomic) Boolean isEnablePanGesture;// default is YES.
 
 - (void)bb_popViewController;
@@ -26,4 +32,6 @@
 - (void)showEffectChange:(CGPoint)pt;
 - (void)restore;
 - (void)screenShot;
+- (void)removeObserver;
+- (void)addObserver;
 @end
