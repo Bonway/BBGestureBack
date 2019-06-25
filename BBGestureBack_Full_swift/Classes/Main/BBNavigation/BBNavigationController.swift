@@ -50,7 +50,22 @@ class BBNavigationController: UINavigationController,UIGestureRecognizerDelegate
     }
     
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
-        if (otherGestureRecognizer.isKind(of: NSClassFromString("UIScrollViewPanGestureRecognizer")!) || otherGestureRecognizer.isKind(of: NSClassFromString("UIPanGestureRecognizer")!)){
+        if otherGestureRecognizer.isKind(of: NSClassFromString("UIScrollViewPanGestureRecognizer")!) || otherGestureRecognizer.isKind(of: NSClassFromString("UIPanGestureRecognizer")!) || otherGestureRecognizer.isKind(of: NSClassFromString("UIScrollViewPagingSwipeGestureRecognizer")!) {
+            
+            let aView = otherGestureRecognizer.view
+            if aView!.isKind(of: UIScrollView.self) {
+                let sv = aView as! UIScrollView
+                if sv.contentOffset.x == 0 {
+                    
+                    if otherGestureRecognizer.isKind(of: NSClassFromString("UIScrollViewPanGestureRecognizer")!) && otherGestureRecognizer.state != .began {
+                        return false
+                    }
+                    
+                    return true
+                    
+                }
+            }
+            
             return false
         }
         return true

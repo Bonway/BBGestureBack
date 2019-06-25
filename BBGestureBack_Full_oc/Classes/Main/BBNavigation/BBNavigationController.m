@@ -57,7 +57,11 @@
         if ([aView isKindOfClass:[UIScrollView class]]) {
             UIScrollView *sv = (UIScrollView *)aView;
             if (sv.contentOffset.x==0) {
-                return YES;
+                if ([otherGestureRecognizer isKindOfClass:NSClassFromString(@"UIScrollViewPanGestureRecognizer")] && otherGestureRecognizer.state != UIGestureRecognizerStateBegan) {
+                    return NO;
+                }else{
+                    return YES;
+                }
             }
         }
         return NO;
