@@ -22,6 +22,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setUpAllChildViewController];
+    
+    //iOS 闪动问题，明白了一看就懂
+    [[UITabBar appearance] setTranslucent:NO];
+    [[UINavigationBar appearance]setTranslucent:NO];
+    self.tabBar.tintColor = [UIColor blueColor];
+    self.tabBar.barTintColor = [UIColor whiteColor];
 }
 - (void)setUpAllChildViewController {
     HomeViewController *home = [[HomeViewController alloc] init];

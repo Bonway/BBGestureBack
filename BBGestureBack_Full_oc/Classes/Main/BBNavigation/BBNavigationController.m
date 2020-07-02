@@ -15,12 +15,11 @@
 
 @implementation BBNavigationController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        self.arrayScreenshot = [NSMutableArray array];
+-(NSMutableArray *)arrayScreenshot{
+    if (!_arrayScreenshot) {
+        _arrayScreenshot = [NSMutableArray array];
     }
-    return self;
+    return _arrayScreenshot;
 }
 
 - (void)viewDidLoad{

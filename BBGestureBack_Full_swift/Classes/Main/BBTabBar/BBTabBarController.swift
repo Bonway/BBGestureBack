@@ -12,6 +12,11 @@ class BBTabBarController: UITabBarController {
         super.viewDidLoad()
         setUpAllChildViewController()
         
+        //iOS 闪动问题，明白了一看就懂
+        UITabBar.appearance().isTranslucent = false
+        UINavigationBar.appearance().isTranslucent = false
+        self.tabBar.tintColor = UIColor.blue
+        self.tabBar.barTintColor = UIColor .white
     }
 
     func setUpAllChildViewController() {
